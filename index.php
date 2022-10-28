@@ -23,12 +23,12 @@
                 </div>
 
                 <div class="flex justify-between items-center">
-                    <img src="./assets/incons/heartpng.png" alt="">
-                    <img src="./assets/incons/bi_cart.png" alt="" class="ml-12">
+                    <button><img src="./assets/incons/heartpng.png" alt=""></button>
+                    <button><img src="./assets/incons/bi_cart.png" alt="" class="ml-12"></button>
 
                     <div class="justify-between items-center w-80">
-                        <span><button class="text-buttonColor font-sans font-bold ml-10 h-16 w-24 hover:bg-amareloMango">Entrar</button></span>
-                        <span><button class="text-buttonColor font-sans font-bold ml-3 w-24 h-16 hover:bg-amareloMango">Registrar-se</button></span>
+                        <span class="text-buttonColor font-sans font-bold"><button class="ml-10 h-16 w-24 hover:bg-amareloMango">Entrar</button></span>
+                        <span class="text-buttonColor font-sans font-bold"><button class="ml-3 w-24 h-16 hover:bg-amareloMango">Registrar-se</button></span>
                     </div>
                 </div>
             </nav>
