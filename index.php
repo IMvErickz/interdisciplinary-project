@@ -19,7 +19,7 @@
 
             <nav class=" w-divNav h-16 flex items-center justify-between">
                 <div class="flex items-center w-96">
-                    <input type="search" class="bg-SearchColor w-96 h-10 rounded-2xl text-white">
+                    <input id="search" type="search" placeholder="Pesquisa" class="bg-SearchColor w-96 h-10 rounded-2xl text-white font-bold text-base">
                 </div>
 
                 <div class="flex justify-between items-center">
@@ -88,5 +88,24 @@
         }
     }
 </script>
+
+<style>
+    #search {
+        background-image: url('./assets/incons/searchpng.png');
+        background-repeat: no-repeat;
+        background-position: left;
+        background-size: 1.3em;
+        padding-left: 5rem;
+
+    }
+
+    #search::-webkit-input-placeholder {
+        color: #7C7C84;
+        font-weight: bold;
+        font-family: sans-serif;
+        font-size: 20px;
+        
+    }
+</style>
 
 </html>
