@@ -18,8 +18,9 @@
             <img src="./assets/incons/Logo.png" alt="" class="ml-8">
 
             <nav class=" w-divNav h-16 flex items-center justify-between">
-                <div class="flex items-center w-96">
+                <div class="flex items-center justify-between w-96">
                     <input id="search" type="search" placeholder="Pesquisa" class="bg-SearchColor w-96 h-10 rounded-2xl text-white font-bold text-base">
+                    <button class="bg-amareloMango rounded-md p-2 ml-2 hover:bg-[#fde047]">Pesquisar</button>
                 </div>
 
                 <div class="flex justify-between items-center">
@@ -36,15 +37,15 @@
 
     </header>
 
-    <div>
-
+    <div class="flex flex-col items-center">
+        <img src="./assets/incons/slide.png" alt="" class="w-[1300px]">
     </div>
 
-    <div class="w-screen flex flex-col justify-center items-center">
+    <div class="flex flex-col justify-center items-center">
         <img src="./assets/incons/Frete.png" alt="" class="h-16">
     </div>
 
-    <div class="w-screen flex flex-col justify-center items-center">
+    <div class=" flex flex-col justify-center items-center">
         <div class="flex flex-row w-11/12 mt-14">
             <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
                 <img src="./assets/incons/Chainsaw.png" alt="">
@@ -93,7 +94,7 @@
     #search {
         background-image: url('./assets/incons/searchpng.png');
         background-repeat: no-repeat;
-        background-position: left;
+        background-position: 10px;
         background-size: 1.3em;
         padding-left: 5rem;
 
@@ -104,7 +105,18 @@
         font-weight: bold;
         font-family: sans-serif;
         font-size: 20px;
-        
+
+    }
+
+    #search::-webkit-search-cancel-button {
+        background-image: url('./assets/incons/close.png');
+        position: relative;
+        right: 20px;
+        -webkit-appearance: none;
+        height: 20px;
+        width: 20px;
+        border-radius: 10px;
+        background: red;
     }
 </style>
 
