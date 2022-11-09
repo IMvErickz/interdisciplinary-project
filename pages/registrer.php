@@ -14,10 +14,10 @@
 
 <body>
     <div class="flex flex-col justify-center items-center w-screen h-screen bg-background">
-        <header class="flex flex-row justify-center items-center gap-4">
-            <img src="../assets/incons/open-book 1.png" alt="" class="w-20 h-20">
+        <header class="flex flex-row justify-center items-center gap-x-4">
+            <img src="../assets/incons/open-book 1.png" alt="" class="w-16 h-16">
             <div class="flex flex-col justify-center items-center">
-                <h1 class="text-buttonColor text-3xl">PsychoMango</h1>
+                <h1 class="text-buttonColor text-2xl">PsychoMango</h1>
                 <span class="flex flex-col justify-center text-center text-label">Registre-se para aproveitar <br>
                     todos nossos serviços
                 </span>
@@ -27,15 +27,15 @@
         <div class="flex flex-col justify-center items-center w-screen h-screen">
             <div class="flex flex-col justify-start w-60">
                 <label for="cpf" class="text-labelInput text-base font-semibold">CPF</label>
-                <input type="text" id="cpf" placeholder="123.456.789-10" class="bg-label rounded-[15px] text-white py-2 px-1">
+                <input type="text" id="cpf" placeholder="123.456.789-10" class="bg-label rounded-[15px] text-white p-1">
 
                 <label for="cpf" class="text-labelInput text-base font-semibold">Email</label>
-                <input type="email" id="email" placeholder="email@example.com" class="bg-label rounded-[15px] text-white py-2 px-1">
+                <input type="email" id="email" placeholder="email@example.com" class="bg-label rounded-[15px] text-white p-1">
                 <label for="cpf" class="text-labelInput text-base font-semibold">Sua senha</label>
-                <input type="password" id="cpf" placeholder="********" class="bg-label rounded-[15px] text-white py-2 px-1">
+                <input type="password" id="cpf" placeholder="********" class="bg-label rounded-[15px] text-white p-1">
 
                 <label for="cpf" class="text-labelInput text-base font-semibold">Confirme sua senha</label>
-                <input type="password" id="cpf" placeholder="********" class="bg-label rounded-[15px] text-white py-2 px-1">
+                <input type="password" id="cpf" placeholder="********" class="bg-label rounded-[15px] text-white p-1">
             </div>
 
             <div class="flex flex-col justify-start w-60">
@@ -44,14 +44,14 @@
                     <label for="cpf" class="text-labelInput text-base font-semibold">Sobrenome</label>
                 </div>
 
-                <div class="flex flex-row justify-start w-60 gap-2">
-                    <input type="text" placeholder="Nome" class="bg-label rounded-[15px] text-white py-2 px-1 w-[115px]">
-                    <input type="text" placeholder="Sobrenome" class="bg-label rounded-[15px] text-white py-2 px-1 w-[115px]">
+                <div class="flex flex-row justify-start w-60 gap-x-2">
+                    <input type="text" id="name" placeholder="Nome" class="bg-label rounded-[15px] text-white p-1 w-[115px]">
+                    <input type="text" id="lastName" placeholder="Sobrenome" class="bg-label rounded-[15px] text-white p-1 w-[115px]">
                 </div>
 
                 <div class="flex flex-col justify-start">
                     <label for="" class="text-labelInput text-base font-semibold">Pais</label>
-                    <select name="" id="" class="bg-label rounded-[15px] py-2 px-1">
+                    <select name="" id="" class="bg-label rounded-[15px] p-1">
                         
                     </select>
                 </div>
@@ -64,8 +64,8 @@
                 </div>
 
                 <div class="flex flex-row justify-center w-60 gap-2">
-                    <input type="date" placeholder="10/09/2000" class="bg-label rounded-[15px] text-white py-2 px-1 w-[115px]">
-                    <input type="text" placeholder="Masc/Fem/Outro" class="bg-label rounded-[15px] text-white py-2 px-1 w-[115px]">
+                    <input type="date" placeholder="10/09/2000" class="bg-label rounded-[15px] text-white p-1 w-[115px]">
+                    <input type="text" placeholder="Masc/Fem/Outro" class="bg-label rounded-[15px] text-white p-1 w-[115px]">
                 </div>
             
             <div class="flex flex-col justify-start">
@@ -80,11 +80,12 @@
                     <span class="text-label"><a href="" class="underline-offset-2 ">termos e condições.</a></span>
                 </div>
             </div>
-            <button class="bg-amareloMango w-96 rounded-[15px] py-2 px-1">Cadastrar</button>
+            <button id="but" class="bg-amareloMango w-96 rounded-[15px] py-2 px-1">Cadastrar</button>
             <a href="" class="text-label text-base">Já tem uma conta?</a>
         </div>
     </div>
 </body>
+<script src="../src/registre.js"></script>
 <style>
     #cpf {
         background-image: url('./cpfIncon.png');
