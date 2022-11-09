@@ -45,20 +45,93 @@
         <img src="./assets/incons/Frete.png" alt="" class="h-16">
     </div>
 
-    <div class=" flex flex-col justify-center items-center">
-        <div class="flex flex-row w-11/12 mt-14">
-            <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
-                <img src="./assets/incons/Chainsaw.png" alt="">
-                <span class="text-buttonColor font-bold font-sans text-xl">Chainsaw Man Vol. 1</span>
-                <div class="ml-40">
-                    <button><img src="./assets/incons/heartpng.png" alt="" class="mt-14"></button>
-                </div>
-                <div class="flex flex-row justify-between items-center w-52 mt-3">
-                    <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 34,90</span>
-                    <button class="hover:bg-white"><img src="./assets/incons/carSet.png" alt=""></button>
-                </div>
-            </div>
+    <div class="flex flex-col justify-center items-center">
 
+
+
+        <div class="flex flex-col justify-center items-center w-11/12">
+            <div class="flex flex-row w-full mt-14 gap-4">
+                <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
+                    <button>
+                        <img src="./assets/incons/Chainsaw.png" alt=""> <br>
+                    </button>
+                    <hr class="border border-white w-60"> <br>
+                    <span class="text-buttonColor font-bold font-sans text-xl">Chainsaw Man Vol. 1</span>
+                    <div class="ml-40">
+                        <button><img src="./assets/incons/heartpng.png" alt="" class="mt-14"></button>
+                    </div>
+                    <div class="flex flex-row justify-between items-center w-52 mt-3">
+                        <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 33,90</span>
+                        <button class="hover:bg-white"><img src="./assets/incons/carSet.png" alt=""></button>
+                    </div>
+                </div>
+
+
+
+                <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
+                    <button>
+                        <img src="./assets/incons/FireForce.png" alt=""> <br>
+                    </button>
+                    <hr class="border border-white w-60"> <br>
+                    <span class="text-buttonColor font-bold font-sans text-xl">Fire Force Vol.27</span>
+                    <div class="ml-40">
+                        <button><img src="./assets/incons/heartpng.png" alt="" class="mt-14"></button>
+                    </div>
+                    <div class="flex flex-row justify-between items-center w-52 mt-3">
+                        <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 34,90</span>
+                        <button class="hover:bg-white"><img src="./assets/incons/carSet.png" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
+                    <button>
+                        <img src="./assets/incons/kimetsu.png" alt=""> <br>
+                    </button>
+                    <hr class="border border-white w-60"> <br>
+                    <span class="text-buttonColor font-bold font-sans text-xl">Demon Slayer - <br>
+                        Kimetsu no Yaiba <br>
+                        Vol. 8
+                    </span>
+                    <div class="ml-40">
+                        <button><img src="./assets/incons/heartpng.png" alt="" class="mt-2"></button>
+                    </div>
+                    <div class="flex flex-row justify-between items-center w-52 mt-3">
+                        <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 30,90</span>
+                        <button class="hover:bg-white"><img src="./assets/incons/carSet.png" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
+                    <button>
+                        <img src="./assets/incons/Jujutsu.png" alt=""> <br>
+                    </button>
+                    <hr class="border border-white w-60"> <br>
+                    <span class="text-buttonColor font-bold font-sans text-xl">Jujutsu Kaisen Vol. 1</span>
+                    <div class="ml-40">
+                        <button><img src="./assets/incons/heartpng.png" alt="" class="mt-14"></button>
+                    </div>
+                    <div class="flex flex-row justify-between items-center w-52 mt-3">
+                        <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 35,90</span>
+                        <button class="hover:bg-white"><img src="./assets/incons/carSet.png" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
+                    <button>
+                        <img src="./assets/incons/naruto.png" alt=""> <br>
+                    </button>
+                    <hr class="border border-white w-60"> <br>
+                    <span class="text-buttonColor font-bold font-sans text-xl">Naruto Gold Vol. 64</span>
+                    <div class="ml-40">
+                        <button><img src="./assets/incons/heartpng.png" alt="" class="mt-14"></button>
+                    </div>
+                    <div class="flex flex-row justify-between items-center w-52 mt-3">
+                        <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 27,90</span>
+                        <button class="hover:bg-white"><img src="./assets/incons/carSet.png" alt=""></button>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 
@@ -80,7 +153,7 @@
                 spacing: {
                     'divNav': '58rem',
                     'searchBar': '30rem',
-                    'cardH': '32rem'
+                    'cardH': '35rem'
                 },
                 fontFamily: {
                     'inter': 'Inter',
