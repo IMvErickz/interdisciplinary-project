@@ -62,7 +62,7 @@
         </div>
 
         <div class="flex flex-row justify-start w-80 gap-x-4">
-            <input type="date" id="dateNasc" placeholder="10/09/2000" class="bg-label rounded-[15px] text-white py-3 px-4 w-[150px]">
+            <input type="text" id="dateNasc" placeholder="10/09/2000" class="bg-label rounded-[15px] text-white py-3 px-4 w-[150px]">
             <select name="" id="sexo" class="bg-label rounded-[15px] py-3 px-4 w-[150px]"></select>
         </div> <br>
 
