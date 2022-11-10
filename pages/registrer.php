@@ -61,25 +61,25 @@
             <label for="cpf" class="text-labelInput text-base font-semibold">Sexo</label>
         </div>
 
-        <div class="flex flex-row justify-center w-80 gap-2">
+        <div class="flex flex-row justify-start w-80 gap-x-4">
             <input type="date" id="dateNasc" placeholder="10/09/2000" class="bg-label rounded-[15px] text-white py-3 px-4 w-[150px]">
             <select name="" id="sexo" class="bg-label rounded-[15px] py-3 px-4 w-[150px]"></select>
         </div> <br>
 
         <div class="flex flex-col justify-start">
             <div class="flex flex-row gap-1">
-                <input type="checkbox">
+                <input type="checkbox" class="w-6 h-6 p-[2px]">
                 <span class="text-checkLabel">Eu li e estou ciente sobre as</span>
                 <span class="underline-offset-2 text-label">políticas de privacidade.</span>
-            </div>
+            </div> <br>
             <div class="flex flex-row gap-1">
-                <input type="checkbox">
+                <input type="checkbox" class="w-6 h-6 p-[2px]">
                 <span class="text-checkLabel">Eu li e aceito os</span>
                 <span class="text-label"><a href="" class="underline-offset-2 ">termos e condições.</a></span>
             </div> <br>
         </div>
         <div class="flex flex-col justify-center items-center gap-7">
-            <button id="but" class="bg-amareloMango w-96 rounded-[15px] py-2 px-1">Cadastrar</button>
+            <button id="but" class="bg-amareloMango w-96 rounded-[15px] py-2 px-1 hover:bg-yellow-200">Cadastrar</button>
             <a href="" class="text-label text-base">Já tem uma conta?</a>
         </div>
     </div>
