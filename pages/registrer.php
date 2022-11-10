@@ -22,20 +22,20 @@
                 todos nossos serviços
             </span>
         </div>
-    </header>
+    </header> <br>
 
     <div class="flex flex-col justify-center items-center">
         <div class="flex flex-col justify-start w-80">
             <label for="cpf" class="text-labelInput text-base font-semibold">CPF</label>
-            <input type="text" id="cpf" placeholder="123.456.789-10" class="bg-label rounded-[15px] text-white py-3 px-4 w-full"> <br>
+            <input type="text" id="cpf" placeholder="123.456.789-10" class="bg-cardColor rounded-[15px] text-white py-3 px-4 w-full"> <br>
 
             <label for="cpf" class="text-labelInput text-base font-semibold">Email</label>
-            <input type="email" id="email" placeholder="email@example.com" class="bg-label rounded-[15px] text-white py-3 px-4"> <br>
+            <input type="email" id="email" placeholder="email@example.com" class="bg-cardColor rounded-[15px] text-white py-3 px-4"> <br>
             <label for="cpf" class="text-labelInput text-base font-semibold">Sua senha</label>
-            <input type="password" id="password" placeholder="********" class="bg-label rounded-[15px] text-white py-3 px-4"> <br>
+            <input type="password" id="password" placeholder="********" class="bg-cardColor rounded-[15px] text-white py-3 px-4"> <br>
 
             <label for="cpf" class="text-labelInput text-base font-semibold">Confirme sua senha</label>
-            <input type="password" id="" placeholder="********" class="bg-label rounded-[15px] text-white py-3 px-4"> <br>
+            <input type="password" id="" placeholder="********" class="bg-cardColor rounded-[15px] text-white py-3 px-4"> <br>
         </div>
 
         <div class="flex flex-col justify-start w-80">
@@ -45,25 +45,25 @@
             </div>
 
             <div class="flex flex-row justify-start w-80 gap-x-2">
-                <input type="text" id="name" placeholder="Nome" class="bg-label rounded-[15px] text-white py-3 px-4 w-[150px]"> <br>
-                <input type="text" id="lastName" placeholder="Sobrenome" class="bg-label rounded-[15px] text-white py-3 px-4 w-[150px]">
+                <input type="text" id="name" placeholder="Nome" class="bg-cardColor rounded-[15px] text-white py-3 px-4 w-[150px]"> <br>
+                <input type="text" id="lastName" placeholder="Sobrenome" class="bg-cardColor rounded-[15px] text-white py-3 px-4 w-[150px]">
             </div>
 
             <div class="flex flex-col justify-start">
                 <label for="" class="text-labelInput text-base font-semibold">Pais</label>
-                <select name="" id="" class="bg-label rounded-[15px] py-3 px-4"></select> <br>
+                <select name="" id="" class="bg-cardColor rounded-[15px] py-3 px-4 w-[184px]"></select> <br>
             </div>
         </div>
 
 
-        <div class="flex flex-row justify-center w-80 gap-20">
+        <div class="flex flex-row justify-start w-80 gap-7">
             <label for="cpf" class="text-labelInput text-base font-semibold">Data de nascimento</label>
             <label for="cpf" class="text-labelInput text-base font-semibold">Sexo</label>
         </div>
 
         <div class="flex flex-row justify-start w-80 gap-x-4">
-            <input type="text" id="dateNasc" placeholder="10/09/2000" class="bg-label rounded-[15px] text-white py-3 px-4 w-[150px]">
-            <select name="" id="sexo" class="bg-label rounded-[15px] py-3 px-4 w-[150px]"></select>
+            <input type="text" id="dateNasc" placeholder="10/09/2000" class="bg-cardColor rounded-[15px] text-white py-3 px-4 w-[150px]">
+            <select name="" id="sexo" class="bg-cardColor rounded-[15px] py-3 px-4 w-[150px]"></select>
         </div> <br>
 
         <div class="flex flex-col justify-start">
