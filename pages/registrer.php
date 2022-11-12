@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="shortcut icon" href="/assets/incons/Logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../assets/incons/Logo.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/dist/main.css" rel="stylesheet">
     <link href="/index.css" rel="stylesheet">
@@ -88,11 +88,12 @@
 <script src="../src/registre.js"></script>
 <style>
     #cpf {
-        background-image: url('./cpfIncon.png');
+        background-image: url('../assets/incons/cpf.png');
         background-repeat: no-repeat;
-        background-position: 10px;
-        background-size: 1.3px;
-        padding-left: 5rem;
+        background-position: 18px;
+        background-size: 20px;
+        padding-left: 3rem;
+        
     }
 </style>
 
