@@ -35,7 +35,7 @@
             <input type="password" id="password" placeholder="********" class="bg-cardColor rounded-[15px] text-white py-3 px-4"> <br>
 
             <label for="cpf" class="text-labelInput text-base font-semibold">Confirme sua senha</label>
-            <input type="password" id="" placeholder="********" class="bg-cardColor rounded-[15px] text-white py-3 px-4"> <br>
+            <input type="password" id="password" placeholder="********" class="bg-cardColor rounded-[15px] text-white py-3 px-4"> <br>
         </div>
 
         <div class="flex flex-col justify-start w-80">
@@ -51,7 +51,7 @@
 
             <div class="flex flex-col justify-start">
                 <label for="" class="text-labelInput text-base font-semibold">Pais</label>
-                <select name="" id="" class="bg-cardColor rounded-[15px] py-3 px-4 w-[184px]"></select> <br>
+                <select name="" id="country" class="bg-cardColor rounded-[15px] py-3 px-4 w-[184px]"></select> <br>
             </div>
         </div>
 
@@ -93,7 +93,43 @@
         background-position: 18px;
         background-size: 20px;
         padding-left: 3rem;
-        
+
+    }
+
+    #email {
+        background-image: url('../assets/incons/mail.png');
+        background-repeat: no-repeat;
+        background-position: 18px;
+        background-size: 20px;
+        padding-left: 3rem;
+
+    }
+
+    #password {
+        background-image: url('../assets/incons/Key.png');
+        background-repeat: no-repeat;
+        background-position: 18px;
+        background-size: 20px;
+        padding-left: 3rem;
+
+    }
+
+    #country {
+        background-image: url('../assets/incons/glob.png');
+        background-repeat: no-repeat;
+        background-position: 18px;
+        background-size: 20px;
+        padding-left: 3rem;
+
+    }
+
+    #dateNasc {
+        background-image: url('../assets/incons/calendar.png');
+        background-repeat: no-repeat;
+        background-position: 18px;
+        background-size: 20px;
+        padding-left: 3rem;
+
     }
 </style>
 
