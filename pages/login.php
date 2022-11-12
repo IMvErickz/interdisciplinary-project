@@ -20,12 +20,14 @@
     <div class="flex flex-col justify-center items-center gap-y-4 w-72">
         <div class="flex flex-col justify-start w-full">
             <label for="" class="text-labelInput text-base">Endereço de email</label>
-            <input id="mail" type="text" placeholder="email@example.com" class="w-full py-3 rounded-[15px] bg-cardColor text-white">
+            <input id="mail" type="text" placeholder="email@example.com" 
+            class="w-full py-3 rounded-[15px] bg-cardColor text-white">
         </div>
 
         <div class="flex flex-col justify-start w-full">
             <label for="" class="text-labelInput text-base">Sua senha</label>
-            <input id="pass" type="text" placeholder="********" class="w-full py-3 rounded-[15px] bg-cardColor text-white">
+            <input id="pass" type="text" placeholder="********" 
+            class="w-full py-3 rounded-[15px] bg-cardColor text-white">
         </div> <br>
     </div>
 
