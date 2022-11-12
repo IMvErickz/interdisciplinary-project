@@ -19,7 +19,8 @@
 
             <nav class=" w-divNav h-16 flex items-center justify-between">
                 <div class="flex items-center justify-between w-96">
-                    <input id="search" type="search" placeholder="Pesquisa" class="bg-SearchColor w-96 h-10 rounded-2xl text-white font-bold text-base">
+                    <input id="search" type="search" placeholder="Pesquisa" 
+                    class="bg-SearchColor w-96 h-10 rounded-2xl text-white font-bold text-base">
                     <button class="bg-amareloMango rounded-md p-2 ml-2 hover:bg-[#fde047]">Pesquisar</button>
                 </div>
 
@@ -28,8 +29,10 @@
                     <button><img src="./assets/incons/bi_cart.png" alt="" class="ml-12"></button>
 
                     <div class="justify-between items-center w-80">
-                        <span class="text-buttonColor font-sans font-bold"><a class="ml-10 h-16 w-24" href=" ./pages/login.php">Entrar</a></span>
-                        <span class="text-buttonColor font-sans font-bold"><a class="ml-10 h-16 w-24" href=" ./pages/registrer.php">Registrar-se</a></span>
+                        <span class="text-buttonColor font-sans font-bold"><a 
+                        class="ml-10 h-16 w-24" href=" ./pages/login.php">Entrar</a></span>
+                        <span class="text-buttonColor font-sans font-bold"><a class="ml-10 h-16 w-24" 
+                        href=" ./pages/registrer.php">Registrar-se</a></span>
                     </div>
                 </div>
             </nav>
