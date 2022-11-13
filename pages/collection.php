@@ -35,12 +35,12 @@
             </nav>
         </div>
     </header>
-    <div class="flex flex-row">
+    <div class="flex flex-row ">
 
 
 
         <div class="w-60 h-screen border-solid border-r-2 border-cardColor">
-            <h2 class="text-white text-2xl">Categorias:</h2> <br>
+            <h2 class="text-white text-2xl font-bold">Categorias:</h2> <br>
             <div class="flex flex-col justify-start gap-1">
                 <a href="" class="text-white">Chainsaw Man</a>
                 <a href="" class="text-white">Naruto</a>
@@ -51,7 +51,7 @@
                 <a href="" class="text-white">Spy x Family</a>
             </div> <br>
             <div class="">
-                <h2 class="text-white text-2xl">Preço:</h2>
+                <h2 class="text-white text-2xl font-bold">Preço:</h2> <br>
                 <span class="text-white">R$20</span>
                 <input id="range" type="range" min="20" max="80">
                 <span class="text-white">R$80</span> <br>
@@ -62,25 +62,96 @@
             </div>
         </div>
 
-        <div class="flex flex-row justify-center items-center h-5/6">
-            <div class="flex flex-col justify-center items-center w-11/12">
-                <div class="flex flex-row w-full mt-14 gap-4">
-                    <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
-                        <button>
-                            <img src="../assets/incons/Chainsaw.png" alt=""> <br>
-                        </button>
-                        <hr class="border border-white w-60"> <br>
-                        <span class="text-buttonColor font-bold font-sans text-xl">Chainsaw Man Vol. 1</span>
-                        <div class="ml-40">
-                            <button><img src="../assets/incons/heartpng.png" alt="" class="mt-14"></button>
+        <div class="flex flex-col">
+            <div class="flex flex-col justify-center items-center">
+                <div class="flex flex-col justify-center items-center w-11/12">
+                    <div class="flex flex-row w-full mt-14 gap-4">
+                        <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
+                            <button>
+                                <img src="../assets/incons/Chainsaw.png" alt=""> <br>
+                            </button>
+                            <hr class="border border-white w-60"> <br>
+                            <span class="text-buttonColor font-bold font-sans text-xl">Chainsaw Man Vol. 1</span>
+                            <div class="ml-40">
+                                <button><img src="../assets/incons/heartpng.png" alt="" class="mt-14"></button>
+                            </div>
+                            <div class="flex flex-row justify-between items-center w-52 mt-3">
+                                <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 33,90</span>
+                                <button class="hover:bg-white"><img src="../assets/incons/carSet.png" alt=""></button>
+                            </div>
                         </div>
-                        <div class="flex flex-row justify-between items-center w-52 mt-3">
-                            <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 33,90</span>
-                            <button class="hover:bg-white"><img src="../assets/incons/carSet.png" alt=""></button>
+
+
+
+                        <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
+                            <button>
+                                <img src="../assets/incons/FireForce.png" alt=""> <br>
+                            </button>
+                            <hr class="border border-white w-60"> <br>
+                            <span class="text-buttonColor font-bold font-sans text-xl">Fire Force Vol.27</span>
+                            <div class="ml-40">
+                                <button><img src="../assets/incons/heartpng.png" alt="" class="mt-14"></button>
+                            </div>
+                            <div class="flex flex-row justify-between items-center w-52 mt-3">
+                                <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 34,90</span>
+                                <button class="hover:bg-white"><img src="../assets/incons/carSet.png" alt=""></button>
+                            </div>
+                        </div>
+
+                        <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
+                            <button>
+                                <img src="../assets/incons/kimetsu.png" alt=""> <br>
+                            </button>
+                            <hr class="border border-white w-60"> <br>
+                            <span class="text-buttonColor font-bold font-sans text-xl">Demon Slayer - <br>
+                                Kimetsu no Yaiba <br>
+                                Vol. 8
+                            </span>
+                            <div class="ml-40">
+                                <button><img src="../assets/incons/heartpng.png" alt="" class="mt-2"></button>
+                            </div>
+                            <div class="flex flex-row justify-between items-center w-52 mt-3">
+                                <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 30,90</span>
+                                <button class="hover:bg-white"><img src="../assets/incons/carSet.png" alt=""></button>
+                            </div>
+                        </div>
+
+                        <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
+                            <button>
+                                <img src="../assets/incons/Jujutsu.png" alt=""> <br>
+                            </button>
+                            <hr class="border border-white w-60"> <br>
+                            <span class="text-buttonColor font-bold font-sans text-xl">Jujutsu Kaisen Vol. 1</span>
+                            <div class="ml-40">
+                                <button><img src="../assets/incons/heartpng.png" alt="" class="mt-14"></button>
+                            </div>
+                            <div class="flex flex-row justify-between items-center w-52 mt-3">
+                                <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 35,90</span>
+                                <button class="hover:bg-white"><img src="../assets/incons/carSet.png" alt=""></button>
+                            </div>
                         </div>
                     </div>
                 </div>
+            </div> <br>
+
+            <div class="flex flex-col justify-center items-center">
+                <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
+                    <button>
+                        <img src="../assets/incons/naruto.png" alt=""> <br>
+                    </button>
+                    <hr class="border border-white w-60"> <br>
+                    <span class="text-buttonColor font-bold font-sans text-xl">Naruto Gold Vol. 64</span>
+                    <div class="ml-40">
+                        <button><img src="../assets/incons/heartpng.png" alt="" class="mt-14"></button>
+                    </div>
+                    <div class="flex flex-row justify-between items-center w-52 mt-3">
+                        <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 27,90</span>
+                        <button class="hover:bg-white"><img src="../assets/incons/carSet.png" alt=""></button>
+                    </div>
+                </div>
             </div>
+        </div>
+    </div>
 </body>
 <script src="../src/coll.js"></script>
 <script>
