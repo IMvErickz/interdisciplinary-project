@@ -17,7 +17,8 @@
 
             <nav class=" w-divNav h-16 flex items-center justify-between">
                 <div class="flex items-center justify-between w-96">
-                    <input id="search" type="search" placeholder="Pesquisa" class="bg-SearchColor w-96 h-10 rounded-2xl text-white font-bold text-base">
+                    <input id="search" type="search" placeholder="Pesquisa" 
+                    class="bg-SearchColor w-96 h-10 rounded-2xl text-white font-bold text-base">
                     <button class="bg-amareloMango rounded-md p-2 ml-2 hover:bg-[#fde047]">Pesquisar</button>
                 </div>
 
@@ -35,11 +36,11 @@
             </nav>
         </div>
     </header>
-    <div class="flex flex-row ">
+    <div class="flex flex-row">
 
 
 
-        <div class="w-60 h-screen border-solid border-r-2 border-cardColor">
+        <div class="w-60 h-[1200px] border-solid border-r-2 border-cardColor">
             <h2 class="text-white text-2xl font-bold">Categorias:</h2> <br>
             <div class="flex flex-col justify-start gap-1">
                 <a href="" class="text-white">Chainsaw Man</a>
@@ -57,7 +58,8 @@
                 <span class="text-white">R$80</span> <br>
                 <div class="flex flex-col justify-center items-center gap-2">
                     <span class="text-white text-2xl" id="rangeValue">R$</span>
-                    <button class="bg-amareloMango font-bold p-2 rounded-lg w-44 hover:bg-amber-200">Confirmar filtro</button>
+                    <button 
+                    class="bg-amareloMango font-bold p-2 rounded-lg w-44 hover:bg-amber-200">Confirmar filtro</button>
                 </div>
             </div>
         </div>
@@ -76,8 +78,8 @@
                                 <button><img src="../assets/incons/heartpng.png" alt="" class="mt-14"></button>
                             </div>
                             <div class="flex flex-row justify-between items-center w-52 mt-3">
-                                <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 33,90</span>
-                                <button class="hover:bg-white"><img src="../assets/incons/carSet.png" alt=""></button>
+                                <span class="text-buttonColor font-extrabold font-sans text-xl">R$33,90</span>
+                                <button class=""><img src="../assets/incons/carSet.png" alt=""></button>
                             </div>
                         </div>
 
@@ -93,8 +95,8 @@
                                 <button><img src="../assets/incons/heartpng.png" alt="" class="mt-14"></button>
                             </div>
                             <div class="flex flex-row justify-between items-center w-52 mt-3">
-                                <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 34,90</span>
-                                <button class="hover:bg-white"><img src="../assets/incons/carSet.png" alt=""></button>
+                                <span class="text-buttonColor font-extrabold font-sans text-xl">R$34,90</span>
+                                <button class=""><img src="../assets/incons/carSet.png" alt=""></button>
                             </div>
                         </div>
 
@@ -111,8 +113,8 @@
                                 <button><img src="../assets/incons/heartpng.png" alt="" class="mt-2"></button>
                             </div>
                             <div class="flex flex-row justify-between items-center w-52 mt-3">
-                                <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 30,90</span>
-                                <button class="hover:bg-white"><img src="../assets/incons/carSet.png" alt=""></button>
+                                <span class="text-buttonColor font-extrabold font-sans text-xl">R$30,90</span>
+                                <button class=""><img src="../assets/incons/carSet.png" alt=""></button>
                             </div>
                         </div>
 
@@ -126,16 +128,16 @@
                                 <button><img src="../assets/incons/heartpng.png" alt="" class="mt-14"></button>
                             </div>
                             <div class="flex flex-row justify-between items-center w-52 mt-3">
-                                <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 35,90</span>
-                                <button class="hover:bg-white"><img src="../assets/incons/carSet.png" alt=""></button>
+                                <span class="text-buttonColor font-extrabold font-sans text-xl">R$35,90</span>
+                                <button class=""><img src="../assets/incons/carSet.png" alt=""></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div> <br>
 
-            <div class="flex flex-col justify-center items-center">
-                <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
+            <div class="flex flex-row justify-start gap-4 ml-11">
+                <div class="bg-cardColor w-60 h-cardH flex flex-col justify-center items-center rounded-md">
                     <button>
                         <img src="../assets/incons/naruto.png" alt=""> <br>
                     </button>
@@ -145,8 +147,54 @@
                         <button><img src="../assets/incons/heartpng.png" alt="" class="mt-14"></button>
                     </div>
                     <div class="flex flex-row justify-between items-center w-52 mt-3">
-                        <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 27,90</span>
-                        <button class="hover:bg-white"><img src="../assets/incons/carSet.png" alt=""></button>
+                        <span class="text-buttonColor font-extrabold font-sans text-xl">R$27,90</span>
+                        <button class=""><img src="../assets/incons/carSet.png" alt=""></button>
+                    </div>
+                </div>
+
+
+                <div class="bg-cardColor w-60 h-cardH flex flex-col justify-center items-center rounded-md">
+                    <button>
+                        <img src="../assets/incons/spy.png" alt=""> <br>
+                    </button>
+                    <hr class="border border-white w-60"> <br>
+                    <span class="text-buttonColor font-bold font-sans text-xl">Spy x Family Vol. 6</span>
+                    <div class="ml-40">
+                        <button><img src="../assets/incons/heartpng.png" alt="" class="mt-14"></button>
+                    </div>
+                    <div class="flex flex-row justify-between items-center w-52 mt-3">
+                        <span class="text-buttonColor font-extrabold font-sans text-xl">R$34,90</span>
+                        <button class=""><img src="../assets/incons/carSet.png" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="bg-cardColor w-60 h-cardH flex flex-col justify-center items-center rounded-md">
+                    <button>
+                        <img src="../assets/incons/one.png" alt=""> <br>
+                    </button>
+                    <hr class="border border-white w-60"> <br>
+                    <span class="text-buttonColor font-bold font-sans text-xl">One Piece Vol. 101</span>
+                    <div class="ml-40">
+                        <button><img src="../assets/incons/heartpng.png" alt="" class="mt-14"></button>
+                    </div>
+                    <div class="flex flex-row justify-between items-center w-52 mt-3">
+                        <span class="text-buttonColor font-extrabold font-sans text-xl">R$32,90</span>
+                        <button class=""><img src="../assets/incons/carSet.png" alt=""></button>
+                    </div>
+                </div>
+
+                <div class="bg-cardColor w-60 h-cardH flex flex-col justify-center items-center rounded-md">
+                    <button>
+                        <img src="../assets/incons/food.png" alt=""> <br>
+                    </button>
+                    <hr class="border border-white w-60"> <br>
+                    <span class="text-buttonColor font-bold font-sans text-xl">Food Wars Vol. 36</span>
+                    <div class="ml-40">
+                        <button><img src="../assets/incons/heartpng.png" alt="" class="mt-14"></button>
+                    </div>
+                    <div class="flex flex-row justify-between items-center w-52 mt-3">
+                        <span class="text-buttonColor font-extrabold font-sans text-xl">R$33,90</span>
+                        <button class=""><img src="../assets/incons/carSet.png" alt=""></button>
                     </div>
                 </div>
             </div>
