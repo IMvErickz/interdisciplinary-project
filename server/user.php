@@ -17,3 +17,5 @@ $sql = "insert into Carrinho_Person_Login (pes_id, email, password,pes_nome, dat
 echo  "<script>alert('Cadastro realizado com sucesso!');</script>";
 
 $set->exec($sql);
+
+header("location:../index.php");

@@ -24,19 +24,19 @@
         </div>
     </header> <br>
 
-    <form method="post">
+    <form id="form" action="../server/user.php" method="post">
         <div class="flex flex-col justify-center items-center">
             <div class="flex flex-col justify-start w-80">
                 <label for="cpf" class="text-labelInput text-base font-semibold">CPF</label>
-                <input name="cpf" type=" text" id="cpf" placeholder="123.456.789-10" class="bg-cardColor rounded-[15px] text-white py-3 px-4 w-full"> <br>
+                <input name="cpf" type="text" required id="cpf" placeholder="123.456.789-10" class="bg-cardColor rounded-[15px] text-white py-3 px-4 w-full"> <br>
 
                 <label for="cpf" class="text-labelInput text-base font-semibold">Email</label>
-                <input name="email" type="email" id="email" placeholder="email@example.com" class="bg-cardColor rounded-[15px] text-white py-3 px-4"> <br>
+                <input name="email" type="email" required id="email" placeholder="email@example.com" class="bg-cardColor rounded-[15px] text-white py-3 px-4"> <br>
                 <label for="cpf" class="text-labelInput text-base font-semibold">Sua senha</label>
-                <input name="pass" type="password" id="password" placeholder="********" class="bg-cardColor rounded-[15px] text-white py-3 px-4"> <br>
+                <input name="pass" type="password" required id="password" placeholder="********" class="bg-cardColor rounded-[15px] text-white py-3 px-4"> <br>
 
                 <label for="cpf" class="text-labelInput text-base font-semibold">Confirme sua senha</label>
-                <input type="password" id="password" placeholder="********" class="bg-cardColor rounded-[15px] text-white py-3 px-4"> <br>
+                <input type="password" id="password2" required placeholder="********" class="bg-cardColor rounded-[15px] text-white py-3 px-4"> <br>
             </div>
 
             <div class="flex flex-col justify-start w-80">
@@ -46,8 +46,8 @@
                 </div>
 
                 <div class="flex flex-row justify-start w-80 gap-x-2">
-                    <input name="name" type="text" id="name" placeholder="Nome" class="bg-cardColor rounded-[15px] text-white py-3 px-4 w-[150px]"> <br>
-                    <input name="lastName" type="text" id="lastName" placeholder="Sobrenome" class="bg-cardColor rounded-[15px] text-white py-3 px-4 w-[150px]">
+                    <input name="name" type="text" required id="name" placeholder="Nome" class="bg-cardColor rounded-[15px] text-white py-3 px-4 w-[150px]"> <br>
+                    <input name="lastName" type="text" required id="lastName" placeholder="Sobrenome" class="bg-cardColor rounded-[15px] text-white py-3 px-4 w-[150px]">
                 </div>
 
                 <div class="flex flex-col justify-start">
@@ -63,18 +63,18 @@
             </div>
 
             <div class="flex flex-row justify-start w-80 gap-x-4">
-                <input name="dataNasc" type="text" id="dateNasc" placeholder="10/09/2000" class="bg-cardColor rounded-[15px] text-white py-3 px-4 w-[150px]">
+                <input name="dataNasc" type="text" required id="dateNasc" placeholder="10/09/2000" class="bg-cardColor rounded-[15px] text-white py-3 px-4 w-[150px]">
                 <select name="" id="sexo" class="bg-cardColor rounded-[15px] py-3 px-4 w-[150px]"></select>
             </div> <br>
 
             <div class="flex flex-col justify-start">
                 <div class="flex flex-row gap-1">
-                    <input type="checkbox" class="w-6 h-6 p-[2px]">
+                    <input type="checkbox" id="pol" required class="w-6 h-6 p-[2px]">
                     <span class="text-checkLabel">Eu li e estou ciente sobre as</span>
                     <a href="" class="underline text-label">políticas de privacidade.</a>
                 </div> <br>
                 <div class="flex flex-row gap-1">
-                    <input type="checkbox" class="w-6 h-6 p-[2px]">
+                    <input type="checkbox" id="pol" required class="w-6 h-6 p-[2px]">
                     <span class="text-checkLabel">Eu li e aceito os</span>
                     <a href="" class="underline text-label">termos e condições.</a>
                 </div> <br>
@@ -91,6 +91,21 @@
 <script src="../src/registre.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <style>
+    #pol {
+        all: initial;
+        border: 1px solid white;
+        width: 24px;
+        height: 24px;
+
+    }
+
+    #pol:checked {
+        background-image: url('../assets/incons/check.png');
+        background-repeat: no-repeat;
+        width: 20px;
+        height: 18px;
+    }
+
     #cpf {
         background-image: url('../assets/incons/cpf.png');
         background-repeat: no-repeat;
@@ -110,6 +125,15 @@
     }
 
     #password {
+        background-image: url('../assets/incons/Key.png');
+        background-repeat: no-repeat;
+        background-position: 18px;
+        background-size: 20px;
+        padding-left: 3rem;
+
+    }
+
+    #password2 {
         background-image: url('../assets/incons/Key.png');
         background-repeat: no-repeat;
         background-position: 18px;
