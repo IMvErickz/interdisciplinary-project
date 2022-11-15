@@ -24,7 +24,7 @@
         </div>
     </header> <br>
 
-    <form action="../server/user.php" method="get">
+    <form method="post">
         <div class="flex flex-col justify-center items-center">
             <div class="flex flex-col justify-start w-80">
                 <label for="cpf" class="text-labelInput text-base font-semibold">CPF</label>
@@ -80,7 +80,7 @@
                 </div> <br>
             </div>
             <div class="flex flex-col justify-center items-center gap-7">
-                <button id="but" class="bg-amareloMango w-96 rounded-[15px] py-2 px-1
+                <button type="submit" id="but" class="bg-amareloMango w-96 rounded-[15px] py-2 px-1
              hover:bg-yellow-200">Cadastrar</button>
                 <a href="" class="text-label text-base underline">Já tem uma conta?</a>
             </div>
@@ -89,6 +89,7 @@
 
 </body>
 <script src="../src/registre.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <style>
     #cpf {
         background-image: url('../assets/incons/cpf.png');
