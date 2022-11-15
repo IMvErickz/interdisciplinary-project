@@ -4,6 +4,18 @@ CREATE DATABASE psychomango;
 
 USE psychomango;
 
+/* Lógico_1: */
+
+CREATE TABLE Person (
+    pes_id int PRIMARY KEY,
+    pes_nome char(30),
+    data_nasc date,
+    email char(100),
+    password char(8),
+    cep int,
+    car_id int
+);
+
 CREATE TABLE Endereco (
     cep int PRIMARY KEY,
     nm_rua char(100),
@@ -21,7 +33,7 @@ CREATE TABLE Estados (
     estd_id int PRIMARY KEY,
     nm_estado char(100),
     sg_estado char(2),
-    pais int
+    id_pais int
 );
 
 CREATE TABLE Produto (
@@ -29,9 +41,7 @@ CREATE TABLE Produto (
     prod_nm char(100),
     prec_prod int,
     categ_id int,
-    car_id int,
-    pes_id int,
-    email char(100)
+    car_id int
 );
 
 CREATE TABLE Categoria (
@@ -44,17 +54,19 @@ CREATE TABLE pais (
     nm_pais char(100)
 );
 
-CREATE TABLE Carrinho_Person_Login (
-    car_id int,
-    pes_id int,
-    pes_nome char(30),
-    data_nasc date,
-    email char(100),
-    password char(8),
-    username char(100),
-    cep int,
-    PRIMARY KEY (car_id, pes_id, email)
+CREATE TABLE Carrinho (
+    car_id int PRIMARY KEY
 );
+ 
+ALTER TABLE Person ADD CONSTRAINT FK_Person_2
+    FOREIGN KEY (cep)
+    REFERENCES Endereco (cep)
+    ON DELETE RESTRICT;
+ 
+ALTER TABLE Person ADD CONSTRAINT FK_Person_3
+    FOREIGN KEY (car_id)
+    REFERENCES Carrinho (car_id)
+    ON DELETE CASCADE;
  
 ALTER TABLE Endereco ADD CONSTRAINT FK_Endereco_2
     FOREIGN KEY (cid_id)
@@ -67,7 +79,7 @@ ALTER TABLE Cidade ADD CONSTRAINT FK_Cidade_2
     ON DELETE RESTRICT;
  
 ALTER TABLE Estados ADD CONSTRAINT FK_Estados_2
-    FOREIGN KEY (pais)
+    FOREIGN KEY (id_pais)
     REFERENCES pais (id_pais)
     ON DELETE RESTRICT;
  
@@ -77,10 +89,6 @@ ALTER TABLE Produto ADD CONSTRAINT FK_Produto_2
     ON DELETE RESTRICT;
  
 ALTER TABLE Produto ADD CONSTRAINT FK_Produto_3
-    FOREIGN KEY (car_id, pes_id, email)
-    REFERENCES Carrinho_Person_Login (car_id, pes_id, email)
+    FOREIGN KEY (car_id)
+    REFERENCES Carrinho (car_id)
     ON DELETE RESTRICT;
- 
-ALTER TABLE Carrinho_Person_Login ADD CONSTRAINT FK_Carrinho_Person_Login_2
-    FOREIGN KEY (cep)
-    REFERENCES Endereco (cep);
