@@ -6,15 +6,6 @@ USE psychomango;
 
 /* Lógico_1: */
 
-CREATE TABLE Person (
-    pes_id int PRIMARY KEY,
-    pes_nome char(30),
-    data_nasc date,
-    email char(100),
-    password char(8),
-    cep int,
-    car_id int
-);
 
 CREATE TABLE Endereco (
     cep int PRIMARY KEY,
@@ -40,8 +31,7 @@ CREATE TABLE Produto (
     cod_prod int PRIMARY KEY,
     prod_nm char(100),
     prec_prod int,
-    categ_id int,
-    car_id int
+    categ_id int
 );
 
 CREATE TABLE Categoria (
@@ -50,45 +40,47 @@ CREATE TABLE Categoria (
 );
 
 CREATE TABLE pais (
-    id_pais int PRIMARY KEY,
+    id_pais int PRIMARY KEY not null AUTO_INCREMENT,
     nm_pais char(100)
 );
 
-CREATE TABLE Carrinho (
-    car_id int PRIMARY KEY
+CREATE TABLE Carrinho_Person (
+    car_id int not null AUTO_INCREMENT,
+    cod_prod int,
+    pes_id int,
+    pes_nome char(30),
+    data_nasc date,
+    email char(100),
+    password char(8),
+    cep int,
+    PRIMARY KEY (car_id, pes_id)
 );
  
-ALTER TABLE Person ADD CONSTRAINT FK_Person_2
-    FOREIGN KEY (cep)
-    REFERENCES Endereco (cep)
-    ON DELETE RESTRICT;
- 
-ALTER TABLE Person ADD CONSTRAINT FK_Person_3
-    FOREIGN KEY (car_id)
-    REFERENCES Carrinho (car_id)
-    ON DELETE CASCADE;
- 
-ALTER TABLE Endereco ADD CONSTRAINT FK_Endereco_2
+ALTER TABLE Endereco 
     FOREIGN KEY (cid_id)
     REFERENCES Cidade (cid_id)
     ON DELETE RESTRICT;
  
-ALTER TABLE Cidade ADD CONSTRAINT FK_Cidade_2
+ALTER TABLE Cidade 
     FOREIGN KEY (estd_id)
     REFERENCES Estados (estd_id)
     ON DELETE RESTRICT;
  
-ALTER TABLE Estados ADD CONSTRAINT FK_Estados_2
+ALTER TABLE Estados 
     FOREIGN KEY (id_pais)
     REFERENCES pais (id_pais)
     ON DELETE RESTRICT;
  
-ALTER TABLE Produto ADD CONSTRAINT FK_Produto_2
+ALTER TABLE Produto 
     FOREIGN KEY (categ_id)
     REFERENCES Categoria (categ_id)
     ON DELETE RESTRICT;
  
-ALTER TABLE Produto ADD CONSTRAINT FK_Produto_3
-    FOREIGN KEY (car_id)
-    REFERENCES Carrinho (car_id)
+ALTER TABLE Carrinho_Person 
+    FOREIGN KEY (cod_prod)
+    REFERENCES Produto (cod_prod)
     ON DELETE RESTRICT;
+ 
+ALTER TABLE Carrinho_Person 
+    FOREIGN KEY (cep)
+    REFERENCES Endereco (cep);

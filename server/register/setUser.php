@@ -11,7 +11,7 @@ $name = filter_input(INPUT_POST, "name");
 $lastName = filter_input(INPUT_POST, "lastName");
 $born = filter_input(INPUT_POST, "dataNasc");
 
-$sql = "insert into person (pes_id, email, password,pes_nome, data_nasc)"
+$sql = "insert into carrinho_person (pes_id, email, password,pes_nome, data_nasc)"
 . " values ('$cpf','$email','$password','$name','$born')";
 
 echo  "<script>alert('Cadastro realizado com sucesso!');</script>";
