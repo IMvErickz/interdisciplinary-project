@@ -1,6 +1,6 @@
 <?php
 
-include_once "./BDconection.php";
+include_once "../BDconection.php";
 
 $set = conection();
 
@@ -18,4 +18,4 @@ echo  "<script>alert('Cadastro realizado com sucesso!');</script>";
 
 $set->exec($sql);
 
-header("location:../index.php");
+header("location:../../index.php");

@@ -24,7 +24,7 @@
         </div>
     </header> <br>
 
-    <form id="form" action="../server/user.php" method="post">
+    <form id="form" action="../server/register/setUser.php" method="post">
         <div class="flex flex-col justify-center items-center">
             <div class="flex flex-col justify-start w-80">
                 <label for="cpf" class="text-labelInput text-base font-semibold">CPF</label>
