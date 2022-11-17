@@ -9,7 +9,7 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <title>Document</title>
+    <title>Finalização</title>
 </head>
 
 <body class="bg-background">
@@ -51,21 +51,23 @@
     <div class="flex flex-row justify-center items-center gap-24">
         <div class="flex flex-row gap-6 ">
             <div class="bg-NavColor flex flex-col justify-startr rounded">
-                <h1 class="text-white text-4xl">Carrinho de compras</h1> <br>
+                <h1 class="text-white text-4xl font-bold">Carrinho de compras</h1> <br>
                 <hr class="border-input">
 
                 <div class="flex flex-row bg-NavColor rounded gap-36 h-80">
-                    <div class="flex flex-col justify-end items-end">
-                        <div class="flex flex-row gap-8 ml-2">
-
+                    <div class="flex flex-row justify-center items-center">
+                        <div class="flex flex-row">
                             <img src="../assets/incons/FireForce.png" alt="" class="w-44 h-60">
+                        </div>
+                        <div class="flex flex-col gap-8 ml-2">
                             <h1 class="text-white text-2xl">Nome do produto</h1>
+                            <div>
+                                <span class="text-white text-sm">Quantidade:</span>
+                                <input type="number" value="1" class="w-16 h-6 text-center">
 
+                            </div>
                         </div>
-                        <div class="flex flex-row gap-2 mb-11">
-                            <span class="text-white text-sm">Quantidade:</span>
-                            <input type="number" value="1" class="w-16 h-6 text-center">
-                        </div>
+
                     </div>
 
 
