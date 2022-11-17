@@ -87,7 +87,7 @@
             </div>
 
 
-            <div class="flex flex-col items-center bg-NavColor rounded w-[350px]  h-[255px] gap-4">
+            <div class="flex flex-col items-center bg-NavColor h-full rounded gap-4">
                 <p class="text-white text-xl">Subtotal <span>1</span> item: <span>asdsadas</span></p>
                 <div>
                     <input type="checkbox">
@@ -95,15 +95,20 @@
                 </div>
                 <div>
                     <input type="text" id="cep" class="bg-input text-white rounded-lg h-12 w-48">
-                    <button class="bg-gray_5 rounded-lg w-24 h-12 text-center text-white font-semibold">Calcular</button>
+                    <button class="bg-gray_5 rounded-lg w-24 h-12 text-center text-white font-semibold" onclick="PromiseCEP()">Calcular</button>
                 </div>
-                <span class="text-white text-base">Valor do frete</span>
+                <div id="resCep">
+                </div>
+                <span class="text-white text-base"></span>
+                <span class="text-white text-base"></span>
+
 
                 <button class="bg-amareloMango w-72 h-12 rounded-lg text-black font-semibold text-2xl hover:bg-amber-300">Finalizar compra</button>
             </div>
         </div>
     </div>
 </body>
+<script src="../src/api/cep.js"></script>
 <script>
     tailwind.config = {
         theme: {

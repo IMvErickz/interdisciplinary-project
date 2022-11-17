@@ -1,19 +1,19 @@
 async function PromiseCEP(){
-    let numCEP = document.getElementById("CepID").value
+    let numCEP = document.getElementById("cep").value
     let cep = await fetch(`https://viacep.com.br/ws/${numCEP}/json/`);
     //Converte o JSON para objeto JS
     let cepConvertido = await cep.json()
     console.log(typeof(cepConvertido))
     console.log(`Número CEP: ${numCEP} \nLogradouro: ${cepConvertido.logradouro} \nBairro: ${cepConvertido.bairro} \nCidade: ${cepConvertido.localidade} \nUF: ${cepConvertido.uf}`)
 
-    let div = document.getElementById("dados")
+    let div = document.getElementById("resCep")
 // div.innerHTML = `<p>Número CEP: ${numCEP}</p> <p>Logradouro: ${cepConvertido.logradouro}</p> <p>Bairro: ${cepConvertido.bairro}</p> <p>Cidade: ${cepConvertido.localidade}</p> <p>UF: ${cepConvertido.uf}</p>`
     if(cepConvertido.logradouro != undefined && cepConvertido.bairro != undefined){
-        cepTitle.textContent = `Número CEP: ${numCEP}`
-        cepLogradouro.textContent = `Logradouro: ${cepConvertido.logradouro}`
-        cepBairro.textContent = `Bairro: ${cepConvertido.bairro}`
-        cepCidade.textContent = `Cidade: ${cepConvertido.localidade}`
-        cepUf.textContent = `UF: ${cepConvertido.uf}`
+       div.innerHTML = `<p class="text-white"><strong>Número CEP:</strong> ${numCEP}</p>
+        <p class="text-white"><strong>Logradouro:</strong> ${cepConvertido.logradouro}</p>
+        <p class="text-white"><strong>Bairro:</strong> ${cepConvertido.bairro}</p>
+        <p class="text-white"><strong>Cidade:</strong> ${cepConvertido.localidade}</p>
+        <p class="text-white"><strong>UF:</strong> ${cepConvertido.uf}</p>`
     }else{
         swal({
             title: "Esse CEP não Existe",
@@ -23,5 +23,4 @@ async function PromiseCEP(){
           });
     }
  
-
 }
