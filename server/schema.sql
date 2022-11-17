@@ -4,8 +4,17 @@ CREATE DATABASE psychomango;
 
 USE psychomango;
 
+
 /* Lógico_1: */
 
+CREATE TABLE Person (
+    pes_id char(14) PRIMARY KEY,
+    pes_nome char(30),
+    data_nasc date,
+    email char(100) unique,
+    password char(8),
+    cep int
+);
 
 CREATE TABLE Endereco (
     cep int PRIMARY KEY,
@@ -15,46 +24,45 @@ CREATE TABLE Endereco (
 );
 
 CREATE TABLE Cidade (
-    cid_id int PRIMARY KEY,
+    cid_id int PRIMARY KEY auto_increment,
     nm_cidade char(100),
     estd_id int
 );
 
 CREATE TABLE Estados (
-    estd_id int PRIMARY KEY,
+    estd_id int PRIMARY KEY auto_increment,
     nm_estado char(100),
     sg_estado char(2),
     id_pais int
 );
 
 CREATE TABLE Produto (
-    cod_prod int PRIMARY KEY,
+    cod_prod int PRIMARY KEY auto_increment,
     prod_nm char(100),
     prec_prod int,
     categ_id int
 );
 
 CREATE TABLE Categoria (
-    categ_id int PRIMARY KEY,
+    categ_id int PRIMARY KEY auto_increment,
     categ_desc char(50)
 );
 
 CREATE TABLE pais (
-    id_pais int PRIMARY KEY not null AUTO_INCREMENT,
+    id_pais int PRIMARY KEY auto_increment,
     nm_pais char(100)
 );
 
-CREATE TABLE Carrinho_Person (
-    car_id int not null AUTO_INCREMENT,
+CREATE TABLE Carrinho (
+    car_id int PRIMARY KEY auto_increment,
     cod_prod int,
-    pes_id int,
-    pes_nome char(30),
-    data_nasc date,
-    email char(100),
-    password char(8),
-    cep int,
-    PRIMARY KEY (car_id, pes_id)
+    pes_id int
 );
+ 
+ALTER TABLE Person 
+    FOREIGN KEY (cep)
+    REFERENCES Endereco (cep)
+    ON DELETE RESTRICT;
  
 ALTER TABLE Endereco 
     FOREIGN KEY (cid_id)
@@ -76,11 +84,15 @@ ALTER TABLE Produto
     REFERENCES Categoria (categ_id)
     ON DELETE RESTRICT;
  
-ALTER TABLE Carrinho_Person 
+ALTER TABLE Carrinho 
     FOREIGN KEY (cod_prod)
     REFERENCES Produto (cod_prod)
     ON DELETE RESTRICT;
  
-ALTER TABLE Carrinho_Person 
-    FOREIGN KEY (cep)
-    REFERENCES Endereco (cep);
+ALTER TABLE Carrinho 
+    FOREIGN KEY (pes_id)
+    REFERENCES Person (pes_id)
+    ON DELETE CASCADE;
+    
+alter table produto 
+MODIFy prec_prod float not null;
