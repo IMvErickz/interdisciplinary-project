@@ -5,6 +5,9 @@
     "tailwindcss": "^3.2.1"
   },
   "dependencies": {
-    "jquery": "^3.6.1"
+    "argument-validator": "^0.1.0",
+    "frete": "^0.4.6",
+    "jquery": "^3.6.1",
+    "soap": "^0.45.0"
   }
 }

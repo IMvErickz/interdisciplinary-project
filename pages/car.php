@@ -109,6 +109,8 @@
     </div>
 </body>
 <script src="../src/api/cep.js"></script>
+<script src="../src/api/frete.js"></script>
+
 <script>
     tailwind.config = {
         theme: {

@@ -15,12 +15,7 @@ async function PromiseCEP(){
         <p class="text-white"><strong>Cidade:</strong> ${cepConvertido.localidade}</p>
         <p class="text-white"><strong>UF:</strong> ${cepConvertido.uf}</p>`
     }else{
-        swal({
-            title: "Esse CEP não Existe",
-            text: "Parece que o CEP digitado é inválido, por favor digite novamente.",
-            icon: "error",
-            button: "Fechar!",
-          });
+       div.innerHTML = `<p class="text-white">CEP não encontrado</p>`
     }
  
 }
