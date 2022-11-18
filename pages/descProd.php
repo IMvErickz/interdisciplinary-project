@@ -47,7 +47,7 @@
                 </div>
                 <div class="flex flex-col gap-20">
                     <div>
-                        <h1 class="text-white font-extrabold text-4xl">Nome do produto</h1>
+                        <h1 class="text-white font-extrabold text-4xl font-sans">Nome do produto</h1>
                         <p class="text-white font-medium">descrição</p>
                     </div>
                     <hr class="border-cardColor">
@@ -57,9 +57,9 @@
                             <span class="text-white text-xl">Preço</span>
                             <span class="text-white">Em até 6x <br> de<span></span> Sem juros</span>
                             <div class="flex flex-row">
-                                <button class="bg-butAdd rounded-l-md w-5 font-extrabold text-center w-10">-</button>
-                                <input id="qnt" type="number" class="w-16 h-8 text-center text-white bg-inputBg" value="1">
-                                <button class="bg-butAdd rounded-r-md w-5 w-5 font-extrabold w-10">+</button>
+                                <button id="less" onclick="less()" class="bg-butAdd rounded-l-md w-5 font-extrabold text-center text-2xl w-10">-</button>
+                                <input id="qnt" type="text" class="w-16 h-8 text-center text-white bg-inputBg" value="1">
+                                <button id="more" onclick="more()" class="bg-butAdd rounded-r-md w-5 w-5 font-extrabold text-2xl w-10">+</button>
                             </div>
                         </div>
                         <div class="flex flex-col gap-y-4">
@@ -71,6 +71,7 @@
             </div>
         </div>
     </div>
+    <span id="res"></span>
 </body>
 <script>
     tailwind.config = {

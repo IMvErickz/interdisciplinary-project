@@ -38,8 +38,8 @@
                     <button><img src="../assets/incons/bi_cart.png" alt="" class="ml-12"></button>
 
                     <div class="justify-between items-center w-80">
-                        <span class="text-buttonColor font-sans font-bold">
-                            <a class="ml-10 h-16 w-24" href=" ./pages/login.php">Entrar</a></span>
+                        <span class="text-white font-sans font-bold"></span>
+                        <a class="ml-10 h-16 w-24 text-white font-bold" href=" ./pages/login.php">Entrar</a></span>
                         <span class="text-buttonColor font-sans font-bold">
                             <a class="ml-10 h-16 w-24" href=" ./pages/registrer.php">Registrar-se</a></span>
                     </div>
