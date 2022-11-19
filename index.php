@@ -19,26 +19,31 @@
 
             <nav class=" w-divNav h-16 flex items-center justify-between">
                 <div class="flex items-center justify-between w-96">
-                    <input id="search" type="search" placeholder="Pesquisa" 
-                    class="bg-SearchColor w-96 h-10 rounded-2xl text-white font-bold text-base">
+                    <input id="search" type="search" placeholder="Pesquisa" class="bg-SearchColor w-96 h-10 rounded-2xl text-white font-bold text-base">
                     <button class="bg-amareloMango rounded-md p-2 ml-2 hover:bg-[#fde047]">Pesquisar</button>
                 </div>
 
                 <div class="flex justify-between items-center">
                     <button><img src="./assets/incons/heartpng.png" alt=""></button>
                     <button><img src="./assets/incons/bi_cart.png" alt="" class="ml-12"></button>
+                </div>
 
+                <div class="flex justify-between items-center">
                     <div class="justify-between items-center w-80">
-                        <span class="text-buttonColor font-sans font-bold"><a 
-                        class="ml-10 h-16 w-24" href=" ./pages/login.php">Entrar</a></span>
-                        <span class="text-buttonColor font-sans font-bold"><a class="ml-10 h-16 w-24" 
-                        href=" ./pages/registrer.php">Registrar-se</a></span>
+                        <span class="text-buttonColor font-sans font-bold"><a class="ml-10 h-16 w-24" href=" ./pages/login.php">Entrar</a></span>
+                        <span class="text-buttonColor font-sans font-bold"><a class="ml-10 h-16 w-24" href=" ./pages/registrer.php">Registrar-se</a></span>
                     </div>
                 </div>
             </nav>
         </div>
 
     </header>
+    <div class="flex flex-col items-end mr-56">
+        <div id="popup" class="flex flex-row w-96 justify-end">
+            <img id="back" src="" alt=""> 
+        </div>
+
+    </div>
 
     <div class="flex flex-col items-center">
         <img src="./assets/incons/slide.png" alt="" class="w-[1300px]">
@@ -60,12 +65,9 @@
                     </button>
                     <hr class="border border-white w-60"> <br>
                     <span class="text-buttonColor font-bold font-sans text-xl">Chainsaw Man Vol. 1</span>
-                    <div class="ml-40">
-                        <button><img src="./assets/incons/heartpng.png" alt="" class="mt-14"></button>
-                    </div>
                     <div class="flex flex-row justify-between items-center w-52 mt-3">
                         <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 33,90</span>
-                        <button class="hover:bg-white"><img src="./assets/incons/carSet.png" alt=""></button>
+                        <button class="hover:bg-white" id="car"><img src="./assets/incons/carSet.png" alt=""></button>
                     </div>
                 </div>
 
@@ -77,9 +79,7 @@
                     </button>
                     <hr class="border border-white w-60"> <br>
                     <span class="text-buttonColor font-bold font-sans text-xl">Fire Force Vol.27</span>
-                    <div class="ml-40">
-                        <button><img src="./assets/incons/heartpng.png" alt="" class="mt-14"></button>
-                    </div>
+
                     <div class="flex flex-row justify-between items-center w-52 mt-3">
                         <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 34,90</span>
                         <button class="hover:bg-white"><img src="./assets/incons/carSet.png" alt=""></button>
@@ -95,9 +95,7 @@
                         Kimetsu no Yaiba <br>
                         Vol. 8
                     </span>
-                    <div class="ml-40">
-                        <button><img src="./assets/incons/heartpng.png" alt="" class="mt-2"></button>
-                    </div>
+
                     <div class="flex flex-row justify-between items-center w-52 mt-3">
                         <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 30,90</span>
                         <button class="hover:bg-white"><img src="./assets/incons/carSet.png" alt=""></button>
@@ -110,9 +108,7 @@
                     </button>
                     <hr class="border border-white w-60"> <br>
                     <span class="text-buttonColor font-bold font-sans text-xl">Jujutsu Kaisen Vol. 1</span>
-                    <div class="ml-40">
-                        <button><img src="./assets/incons/heartpng.png" alt="" class="mt-14"></button>
-                    </div>
+
                     <div class="flex flex-row justify-between items-center w-52 mt-3">
                         <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 35,90</span>
                         <button class="hover:bg-white"><img src="./assets/incons/carSet.png" alt=""></button>
@@ -125,9 +121,7 @@
                     </button>
                     <hr class="border border-white w-60"> <br>
                     <span class="text-buttonColor font-bold font-sans text-xl">Naruto Gold Vol. 64</span>
-                    <div class="ml-40">
-                        <button><img src="./assets/incons/heartpng.png" alt="" class="mt-14"></button>
-                    </div>
+
                     <div class="flex flex-row justify-between items-center w-52 mt-3">
                         <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 27,90</span>
                         <button class="hover:bg-white"><img src="./assets/incons/carSet.png" alt=""></button>
@@ -139,6 +133,7 @@
     </div>
 
 </body>
+<script src="./src/home.js"></script>
 
 
 <script>
