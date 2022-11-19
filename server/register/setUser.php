@@ -14,7 +14,7 @@ $born = filter_input(INPUT_POST, "dataNasc");
 $sql = "insert into person (pes_id, email, password,pes_nome, data_nasc)"
 . " values ('$cpf','$email','$password','$name','$born')";
 
-echo  "<script>alert('Cadastro realizado com sucesso!');</script>";
+echo  "<script>alert('Ocorreu um erro com seu cadastro, por favor tente novamente');</script>";
 
 $set->exec($sql);
 

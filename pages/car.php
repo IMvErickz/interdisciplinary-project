@@ -48,7 +48,7 @@
         </div>
     </header> <br>
 
-    <div class="flex flex-row justify-center items-center gap-24">
+    <div id="descArea" class="flex flex-row justify-center items-center gap-24">
         <div class="flex flex-row gap-6 ">
             <div class="bg-NavColor flex flex-col justify-startr rounded">
                 <h1 class="text-white text-4xl font-bold">Carrinho de compras</h1> <br>
@@ -78,7 +78,7 @@
                             <p class="text-white">Em até 6x de <span>asdas</span> em juros</p>
                         </div>
                         <div class="flex flex-col justify-center items-center">
-                            <button><img src="../assets/incons/Eliminar.png" alt=""></button>
+                            <button id="exclud" onclick="eliminateProduct()"><img src="../assets/incons/Eliminar.png" alt=""></button>
 
                         </div>
                     </div>
@@ -110,6 +110,9 @@
 </body>
 <script src="../src/api/cep.js"></script>
 <script src="../src/api/frete.js"></script>
+<script src="../src/car.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 
 <script>
     tailwind.config = {

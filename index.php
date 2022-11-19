@@ -19,8 +19,8 @@
 
             <nav class=" w-divNav h-16 flex items-center justify-between">
                 <div class="flex items-center justify-between w-96">
-                    <input id="search" type="search" placeholder="Pesquisa" class="bg-SearchColor w-96 h-10 rounded-2xl text-white font-bold text-base">
-                    <button class="bg-amareloMango rounded-md p-2 ml-2 hover:bg-[#fde047]">Pesquisar</button>
+                    <input onkeyup="search_animal()" id="search" type="search" placeholder="Pesquisa" class="bg-SearchColor w-96 h-10 rounded-2xl text-white font-bold text-base">
+                    <button id="hiddenList" class="bg-amareloMango rounded-md p-2 ml-2 hover:bg-[#fde047]">Fechar</button>
                 </div>
 
                 <div class="flex justify-between items-center">
@@ -38,9 +38,20 @@
         </div>
 
     </header>
+
+    <div class="flex flex-col w-full items-center">
+        <div class="bg-gray_800 w-80 rounded-b-lg flex flex-col justify-center items-center" id="divList">
+            <ul id='list' class="flex flex-col justify-start items-start">
+                <a href="" class="flex flex-row gap-x-20 items-start">
+                    <img src="" alt="" class="w-16">
+                    <li class="animals text-white"></li>
+                </a>
+            </ul>
+        </div>
+    </div>
     <div class="flex flex-col items-end mr-56">
         <div id="popup" class="flex flex-row w-96 justify-end">
-            <img id="back" src="" alt=""> 
+            <img id="back" src="" alt="">
         </div>
 
     </div>
@@ -82,7 +93,7 @@
 
                     <div class="flex flex-row justify-between items-center w-52 mt-3">
                         <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 34,90</span>
-                        <button class="hover:bg-white"><img src="./assets/incons/carSet.png" alt=""></button>
+                        <button class="hover:bg-white" id="car"><img src="./assets/incons/carSet.png" alt=""></button>
                     </div>
                 </div>
 
@@ -98,7 +109,7 @@
 
                     <div class="flex flex-row justify-between items-center w-52 mt-3">
                         <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 30,90</span>
-                        <button class="hover:bg-white"><img src="./assets/incons/carSet.png" alt=""></button>
+                        <button class="hover:bg-white" id="car"><img src="./assets/incons/carSet.png" alt=""></button>
                     </div>
                 </div>
 
@@ -111,7 +122,7 @@
 
                     <div class="flex flex-row justify-between items-center w-52 mt-3">
                         <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 35,90</span>
-                        <button class="hover:bg-white"><img src="./assets/incons/carSet.png" alt=""></button>
+                        <button class="hover:bg-white" id="car"><img src="./assets/incons/carSet.png" alt=""></button>
                     </div>
                 </div>
 
@@ -124,7 +135,7 @@
 
                     <div class="flex flex-row justify-between items-center w-52 mt-3">
                         <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 27,90</span>
-                        <button class="hover:bg-white"><img src="./assets/incons/carSet.png" alt=""></button>
+                        <button class="hover:bg-white" id="car"><img src="./assets/incons/carSet.png" alt=""></button>
                     </div>
                 </div>
 
@@ -147,6 +158,7 @@
                     amareloMango: '#FFD222',
                     background: '#161616',
                     cardColor: '#35353A',
+                    gray_800: '#7C7C8A',
                 },
                 spacing: {
                     'divNav': '58rem',
@@ -162,6 +174,10 @@
 </script>
 
 <style>
+    #divList {
+        scroll-behavior: smooth;
+    }
+
     #search {
         background-image: url('./assets/incons/searchpng.png');
         background-repeat: no-repeat;
