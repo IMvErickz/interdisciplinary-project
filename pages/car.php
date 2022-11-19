@@ -17,7 +17,7 @@
     include_once "../server/BDconection.php";
     $set = conection();
 
-    $sql = "select * from produto";
+    $sql = "select * from Carrinho";
     $result = $set->query($sql);
 
     $line = $result->fetch(PDO::FETCH_ASSOC)
