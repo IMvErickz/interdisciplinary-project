@@ -27,3 +27,9 @@ VALUES ('Afeganistão'),
 ('Andorra'), 
 ('Angola'), 
 ('Brasil');
+
+INSERT INTO `sexo`(`desc_sexo`) 
+VALUES ('Masculino'), 
+('Feminino');
+
+INSERT INTO `sexo`(`desc_sexo`) VALUES ('Prefiro não declarar');

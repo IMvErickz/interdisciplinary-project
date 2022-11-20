@@ -58,6 +58,11 @@ CREATE TABLE Carrinho (
     cod_prod int,
     pes_id int
 );
+
+CREATE TABLE sexo ( 
+    sexo_id int PRIMARY KEY auto_increment, 
+    desc_sexo char(50) 
+);
  
 ALTER TABLE Person 
     FOREIGN KEY (cep)
@@ -96,3 +101,9 @@ ALTER TABLE Carrinho
     
 alter table produto 
 MODIFy prec_prod float not null;
+
+ALTER TABLE `person` 
+CHANGE `password` 
+`password` TEXT CHARACTER
+ SET utf8mb4 COLLATE utf8mb4_general_ci 
+ NULL DEFAULT NULL;

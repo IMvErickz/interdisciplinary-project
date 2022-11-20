@@ -13,6 +13,22 @@
 </head>
 
 <body class="bg-background">
+    <?php
+    include_once "../server/BDconection.php";
+    include_once "../server/functionSel.php";
+
+    $mybanc = conection();
+
+    $sqlCountry = "select * from pais";
+    $country = $mybanc->query($sqlCountry);
+    $lista = $country->fetchAll();
+
+    $sqlSex = "select * from sexo";
+    $sex = $mybanc->query($sqlSex);
+    $sexList = $sex->fetchAll();
+
+
+    ?>
 
     <header class="flex flex-row justify-center items-center gap-x-4">
         <img src="../assets/incons/open-book 1.png" alt="" class="w-28 h-28">
@@ -52,7 +68,17 @@
 
                 <div class="flex flex-col justify-start">
                     <label for="" class="text-labelInput text-base font-semibold">Pais</label>
-                    <select name="" id="country" class="bg-cardColor rounded-[15px] py-3 px-4 w-[184px]"></select> <br>
+                    <div class="flex flex-row gap-x-2">
+                        <select name="" id="country" class="bg-cardColor rounded-[15px] py-3 px-4 w-[184px] text-white">
+                            <option value="" class="text-white">Selecione</option>
+                            <option value="" class="text-white">
+                                <?php
+                                select($lista, "id_pais", "nm_pais", "", "")
+                                ?>
+                            </option>
+                        </select> <br>
+                        <span class="text-white">Opcional</span>
+                    </div>
                 </div>
             </div>
 
@@ -64,7 +90,14 @@
 
             <div class="flex flex-row justify-start w-80 gap-x-4">
                 <input name="dataNasc" type="text" required id="dateNasc" placeholder="10/09/2000" class="bg-cardColor rounded-[15px] text-white py-3 px-4 w-[150px]">
-                <select name="" id="sexo" class="bg-cardColor rounded-[15px] py-3 px-4 w-[150px]"></select>
+                <select name="" id="sexo" class="bg-cardColor rounded-[15px] py-3 px-4 w-[150px] text-white">
+                    <option value="">Selecione</option>
+                    <option value="">
+                        <?php
+                        select($sexList, "sexo_id", "desc_sexo", "", "")
+                        ?>
+                    </option>
+                </select>
             </div> <br>
 
             <div class="flex flex-col justify-start">

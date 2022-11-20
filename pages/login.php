@@ -11,42 +11,81 @@
 </head>
 
 <body class="bg-background flex flex-col justify-center items-center">
+
     <header class="flex flex-col justify-center items-center">
         <img src="../assets/incons/open-book 1.png" alt="" class="w-32 h-32">
         <h1 class="text-buttonColor text-3xl">PsychoMango</h1>
         <span class="text-lg text-label">Faça o login e comece a usar!</span>
     </header> <br> <br>
+    <form method="post">
+        <div class="flex flex-col justify-center items-center gap-y-4 w-72">
+            <div class="flex flex-col justify-start w-full">
+                <label for="" class="text-labelInput text-base">Endereço de email</label>
+                <input name="email" id="mail" type="text" placeholder="email@example.com" class="w-full py-3 rounded-[15px] bg-cardColor text-white">
+            </div>
 
-    <div class="flex flex-col justify-center items-center gap-y-4 w-72">
-        <div class="flex flex-col justify-start w-full">
-            <label for="" class="text-labelInput text-base">Endereço de email</label>
-            <input id="mail" type="text" placeholder="email@example.com" 
-            class="w-full py-3 rounded-[15px] bg-cardColor text-white">
+            <div class="flex flex-col justify-start w-full">
+                <label for="" class="text-labelInput text-base">Sua senha</label>
+                <input name="pass" id="pass" type="password" placeholder="********" class="w-full py-3 rounded-[15px] bg-cardColor text-white">
+            </div> <br>
         </div>
 
-        <div class="flex flex-col justify-start w-full">
-            <label for="" class="text-labelInput text-base">Sua senha</label>
-            <input id="pass" type="text" placeholder="********" 
-            class="w-full py-3 rounded-[15px] bg-cardColor text-white">
-        </div> <br>
-    </div>
+        <div class="flex flex-col justify-center items-center gap-y-8 w-72">
 
-    <div class="flex flex-col justify-center items-center gap-y-8 w-72">
+            <div class="flex flex-row justify-start w-full gap-x-2">
+                <input id="check" type="checkbox" class="w-6 h-6">
+                <span for="check" class="text-checkLabel">Lembre de mim</span>
+            </div>
 
-        <div class="flex flex-row justify-start w-full gap-x-2">
-            <input id="check" type="checkbox" class="w-6 h-6">
-            <span for="check" class="text-checkLabel">Lembre de mim</span>
+            <div class="w-full flex flex-col justify-center items-center">
+                <button class="bg-amareloMango rounded-[15px] py-3 w-full font-semibold" type="submit" name="send">Entrar na plataforma</button>
+            </div>
+
+            <div class="w-full flex flex-col justify-center items-center">
+                <a href="" class="text-label underline">Esqueceu sua senha?</a>
+                <a href="" class="text-label underline">Cadastre-se aqui</a>
+            </div>
         </div>
+    </form>
+    <?php
 
-        <div class="w-full flex flex-col justify-center items-center">
-            <button class="bg-amareloMango rounded-[15px] py-3 w-full">Entrar na plataforma</button>
-        </div>
+    function setBut(){
+        $but  = isset($_POST["send"]);
+        if($but){
+            include_once '../server/BDconection.php';
+            $myBank = conection();
 
-        <div class="w-full flex flex-col justify-center items-center">
-            <a href="" class="text-label underline">Esqueceu sua senha?</a>
-            <a href="" class="text-label underline">Cadastre-se aqui</a>
-        </div>
-    </div>
+            $sql = "select * from person";
+
+            $result = $myBank->query($sql);
+
+            $list = $result->fetch(PDO::FETCH_ASSOC);
+
+            $inputEmail = filter_input(INPUT_POST, "email");
+            $inputPass = filter_input(INPUT_POST, "pass");
+
+            $email = $list['email'];
+            $password = $list['password'];
+
+
+            if ($email != $inputEmail || $password != $inputPass) {
+                echo "<span class='text-red-600 font-semibold text-3xl'>";
+                echo "Email ou senha incorretos";
+                echo "</span>";
+            } else if($inputEmail == "" || $inputPass == ""){
+                echo "<span class='text-red-600 font-semibold text-3xl'>";
+                echo "Os campos estão vazios";
+                echo "</span>";
+            } else {
+                header("location:../index.php");
+            }
+        }
+    }
+
+    setBut();
+
+    
+    ?>
 </body>
 <script>
     tailwind.config = {
