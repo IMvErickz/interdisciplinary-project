@@ -29,10 +29,15 @@
                 </div>
 
                 <div class="flex justify-between items-center">
-                    <div class="justify-between items-center w-80">
-                        <span class="text-buttonColor font-sans font-bold"><a class="ml-10 h-16 w-24" href=" ./pages/login.php">Entrar</a></span>
-                        <span class="text-buttonColor font-sans font-bold"><a class="ml-10 h-16 w-24" href=" ./pages/registrer.php">Registrar-se</a></span>
+                    <div id="buts" class="justify-between items-center w-80">
+                        <button id="login" name="login" class="text-buttonColor font-sans font-bold"><a class="ml-10 h-16 w-24" href=" ./pages/login.php">Entrar</a></button>
+                        <button id="res" name="regis" class="text-buttonColor font-sans font-bold"><a class="ml-10 h-16 w-24" href=" ./pages/registrer.php">Registrar-se</a></button>
                     </div>
+                    <div class="flex flex-col justify-center items-center mr-8">
+                        <span id="setName" class="text-white font-semibold text-3xl"></span>
+
+                    </div>
+
                 </div>
             </nav>
         </div>
@@ -143,8 +148,34 @@
         </div>
     </div>
 
+    <?php
+
+    //$global = include_once './server/login/login.php';
+    // $set = setBut();
+    //echo $set;
+    include_once './server/BDconection.php';
+    include_once './server/login/login.php';
+
+    $set = conection();
+    $sql = "select * from person";
+    $result = $set->query($sql);
+    $list = $result->fetch(PDO::FETCH_ASSOC);
+
+    // $name = $list['pes_nome'];
+
+    ?>
+
 </body>
+
 <script src="./src/home.js"></script>
+<script src="./src/beforeRedirect.js"></script>
+
+
+
+</script>
+<script id="remember" name="remember">
+
+</script>
 
 
 <script>

@@ -43,7 +43,7 @@
             </div>
             <div class="flex flex-row gap-x-20">
                 <div>
-                    <img src="../assets/incons/FireForce.png" alt="" class="w-64">
+                    <img src="" alt="" class="w-64">
                 </div>
                 <div class="flex flex-col gap-20">
                     <div>
@@ -57,9 +57,9 @@
                             <span class="text-white text-xl">Preço</span>
                             <span class="text-white">Em até 6x <br> de<span></span> Sem juros</span>
                             <div class="flex flex-row">
-                                <button id="less" onclick="less()" class="bg-butAdd rounded-l-md w-5 font-extrabold text-center text-2xl w-10">-</button>
-                                <input id="qnt" type="text" class="w-16 h-8 text-center text-white bg-inputBg" value="1">
-                                <button id="more" onclick="more()" class="bg-butAdd rounded-r-md w-5 w-5 font-extrabold text-2xl w-10">+</button>
+                                <button id="less" onclick="less()" class="bg-butAdd rounded-l-md  font-extrabold text-center text-2xl w-10">-</button>
+                                <input id="qnt" type="number" min="1" class="w-16 h-8 text-center text-white bg-inputBg" value="1">
+                                <button id="more" onclick="more()" class="bg-butAdd rounded-r-md  font-extrabold text-2xl w-10">+</button>
                             </div>
                         </div>
                         <div class="flex flex-col gap-y-4">

@@ -69,4 +69,3 @@ const datasValue = document.getElementById('but').addEventListener('click', func
         })
      } 
 })
-
