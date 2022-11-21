@@ -33,8 +33,9 @@
                         <button id="login" name="login" class="text-buttonColor font-sans font-bold"><a class="ml-10 h-16 w-24" href=" ./pages/login.php">Entrar</a></button>
                         <button id="res" name="regis" class="text-buttonColor font-sans font-bold"><a class="ml-10 h-16 w-24" href=" ./pages/registrer.php">Registrar-se</a></button>
                     </div>
-                    <div class="flex flex-col justify-center items-center mr-8">
+                    <div class="flex flex-row justify-center items-center mr-8 gap-x-2">
                         <span id="setName" class="text-white font-semibold text-3xl"></span>
+                        <img id="avatar" src="" alt="" class="w-12">
 
                     </div>
 
