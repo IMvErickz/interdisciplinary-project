@@ -26,7 +26,7 @@ function setBut()
             echo "<span class='text-red-600 font-semibold text-3xl'>";
             echo "Não dados não encontrados";
             echo "</span>";
-            //$e->getMessage();
+            $e->getMessage();
         } finally{
             echo "<span class='text-red-600 font-semibold text-3xl'>";
             echo "Não dados não encontrados";

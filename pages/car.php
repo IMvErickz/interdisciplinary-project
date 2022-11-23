@@ -34,15 +34,16 @@
                 </div>
 
                 <div class="flex justify-between items-center">
-                    <button><img src="../assets/incons/heartpng.png" alt=""></button>
-                    <button><img src="../assets/incons/bi_cart.png" alt="" class="ml-12"></button>
-
-                    <div class="justify-between items-center w-80">
-                        <span class="text-white font-sans font-bold"></span>
-                        <a class="ml-10 h-16 w-24 text-white font-bold" href=" ./pages/login.php">Entrar</a></span>
-                        <span class="text-buttonColor font-sans font-bold">
-                            <a class="ml-10 h-16 w-24" href=" ./pages/registrer.php">Registrar-se</a></span>
+                    <div id="buts" class="justify-between items-center w-80">
+                        <button id="login" name="login" class="text-buttonColor font-sans font-bold"><a class="ml-10 h-16 w-24" href=" ./pages/login.php">Entrar</a></button>
+                        <button id="res" name="regis" class="text-buttonColor font-sans font-bold"><a class="ml-10 h-16 w-24" href=" ./pages/registrer.php">Registrar-se</a></button>
                     </div>
+                    <div class="flex flex-row justify-center items-center mr-8 gap-x-2">
+                        <span id="setName" class="text-white font-semibold text-3xl"></span>
+                        <img id="avatar" src="" alt="" class="w-12">
+
+                    </div>
+
                 </div>
             </nav>
         </div>
@@ -112,6 +113,7 @@
 <script src="../src/api/frete.js"></script>
 <script src="../src/car.js"></script>
 <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="./src/beforeRedirect.js"></script>
 
 
 <script>

@@ -17,21 +17,21 @@
 
             <nav class=" w-divNav h-16 flex items-center justify-between">
                 <div class="flex items-center justify-between w-96">
-                    <input id="search" type="search" placeholder="Pesquisa" 
-                    class="bg-SearchColor w-96 h-10 rounded-2xl text-white font-bold text-base">
+                    <input id="search" type="search" placeholder="Pesquisa" class="bg-SearchColor w-96 h-10 rounded-2xl text-white font-bold text-base">
                     <button class="bg-amareloMango rounded-md p-2 ml-2 hover:bg-[#fde047]">Pesquisar</button>
                 </div>
 
                 <div class="flex justify-between items-center">
-                    <button><img src="../assets/incons/heartpng.png" alt=""></button>
-                    <button><img src="../assets/incons/bi_cart.png" alt="" class="ml-12"></button>
-
-                    <div class="justify-between items-center w-80">
-                        <span class="text-buttonColor font-sans font-bold">
-                            <a class="ml-10 h-16 w-24" href=" ./pages/login.php">Entrar</a></span>
-                        <span class="text-buttonColor font-sans font-bold">
-                            <a class="ml-10 h-16 w-24" href=" ./pages/registrer.php">Registrar-se</a></span>
+                    <div id="buts" class="justify-between items-center w-80">
+                        <button id="login" name="login" class="text-buttonColor font-sans font-bold"><a class="ml-10 h-16 w-24" href=" ./pages/login.php">Entrar</a></button>
+                        <button id="res" name="regis" class="text-buttonColor font-sans font-bold"><a class="ml-10 h-16 w-24" href=" ./pages/registrer.php">Registrar-se</a></button>
                     </div>
+                    <div class="flex flex-row justify-center items-center mr-8 gap-x-2">
+                        <span id="setName" class="text-white font-semibold text-3xl"></span>
+                        <img id="avatar" src="" alt="" class="w-12">
+
+                    </div>
+
                 </div>
             </nav>
         </div>
@@ -58,8 +58,7 @@
                 <span class="text-white">R$80</span> <br>
                 <div class="flex flex-col justify-center items-center gap-2">
                     <span class="text-white text-2xl" id="rangeValue">R$</span>
-                    <button 
-                    class="bg-amareloMango font-bold p-2 rounded-lg w-44 hover:bg-amber-200">Confirmar filtro</button>
+                    <button class="bg-amareloMango font-bold p-2 rounded-lg w-44 hover:bg-amber-200">Confirmar filtro</button>
                 </div>
             </div>
         </div>
@@ -202,6 +201,7 @@
     </div>
 </body>
 <script src="../src/coll.js"></script>
+<script src="./src/beforeRedirect.js"></script>
 <script>
     tailwind.config = {
         theme: {
