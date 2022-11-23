@@ -1,13 +1,14 @@
 <?php
 function setBut()
 {
-    
+    error_reporting(E_ERROR | E_PARSE);
     $but  = isset($_POST["send"]);
     if ($but) {
         include_once '../server/BDconection.php';
         $myBank = conection();
 
         $valueEmail = filter_input(INPUT_POST, "email");
+        try {
 
         $sql = "select * from person where email = '$valueEmail'";
 
@@ -17,9 +18,21 @@ function setBut()
 
         $inputPass = filter_input(INPUT_POST, "pass");
 
-        $email = $list['email'];
-        $password = $list['password'];
-        $name = $list['pes_nome'];
+        
+            $email = $list['email'];
+            $password = $list['password'];
+            $name = $list['pes_nome'];
+        }catch(Exception $e){
+            echo "<span class='text-red-600 font-semibold text-3xl'>";
+            echo "Não dados não encontrados";
+            echo "</span>";
+            //$e->getMessage();
+        } finally{
+            echo "<span class='text-red-600 font-semibold text-3xl'>";
+            echo "Não dados não encontrados";
+            echo "</span>";
+            
+        }
 
 
         if ($email != $valueEmail || $password != $inputPass) {
