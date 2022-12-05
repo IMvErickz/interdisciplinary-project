@@ -33,3 +33,13 @@ VALUES ('Masculino'),
 ('Feminino');
 
 INSERT INTO `sexo`(`desc_sexo`) VALUES ('Prefiro não declarar');
+
+UPDATE `produto` SET `imagem` = './assets/incons/Chainsaw.png' WHERE `produto`.`cod_prod` = 1;
+
+UPDATE `produto` SET `imagem` = './assets/incons/FireForce.png' WHERE `produto`.`cod_prod` = 2;
+UPDATE `produto` SET `imagem` = './assets/incons/kimetsu.png' WHERE `produto`.`cod_prod` = 3;
+UPDATE `produto` SET `imagem` = './assets/incons/Jujutsu.png' WHERE `produto`.`cod_prod` = 4;
+UPDATE `produto` SET `imagem` = './assets/incons/naruto.png' WHERE `produto`.`cod_prod` = 5;
+UPDATE `produto` SET `imagem` = './assets/incons/spy.png' WHERE `produto`.`cod_prod` = 6;
+UPDATE `produto` SET `imagem` = './assets/incons/one.png' WHERE `produto`.`cod_prod` = 7;
+UPDATE `produto` SET `imagem` = './assets/incons/food.png' WHERE `produto`.`cod_prod` = 8;

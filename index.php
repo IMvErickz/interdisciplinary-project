@@ -13,6 +13,18 @@
 </head>
 
 <body class="bg-background">
+
+    <?php
+    include_once './server/BDconection.php';
+
+    $set = conection();
+
+    $sql = "select * from produto;";
+
+    $result = $set->query($sql);
+
+
+    ?>
     <header>
         <div class="flex justify-between items-center bg-NavColor">
             <img src="./assets/incons/Logo.png" alt="" class="ml-8">
@@ -25,7 +37,7 @@
 
                 <div class="flex justify-between items-center">
                     <button><img src="./assets/incons/heartpng.png" alt=""></button>
-                    <button><img src="./assets/incons/bi_cart.png" alt="" class="ml-12"></button>
+                    <a href="./pages/car.php"><img src="./assets/incons/bi_cart.png" alt="" class="ml-12"></a>
                 </div>
 
                 <div class="flex justify-between items-center">
@@ -72,111 +84,58 @@
 
     <div class="flex flex-col justify-center items-center">
 
+        <form action="./server/car/carSet.php" method="post">
 
+            <div class="flex flex-row">
+                <?php
 
-        <div class="flex flex-col justify-center items-center w-11/12">
-            <div class="flex flex-row w-full mt-14 gap-4">
-                <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
-                    <button>
-                        <img src="./assets/incons/Chainsaw.png" alt=""> <br>
-                    </button>
-                    <hr class="border border-white w-60"> <br>
-                    <span class="text-buttonColor font-bold font-sans text-xl">Chainsaw Man Vol. 1</span>
-                    <div class="flex flex-row justify-between items-center w-52 mt-3">
-                        <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 33,90</span>
-                        <button class="hover:bg-white" id="car"><img src="./assets/incons/carSet.png" alt=""></button>
-                    </div>
-                </div>
+                while ($line = $result->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<div class='flex flex-col justify-center items-center w-11/12'>";
+                    echo "<div class='flex flex-row w-full mt-14 gap-4'>";
+                    echo  "<div class='bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md'>";
+                    echo    "<button>";
+                    echo        "<img src='$line[imagem]' alt='> <br>";
+                    echo    "</button>";
+                    echo    "<hr class='border border-white w-60'> <br>";
+                    echo    "<span class='text-buttonColor font-bold font-sans text-xl'>$line[prod_nm]</span>";
+                    echo    "<div class='flex flex-row justify-between items-center w-52 mt-3'>";
+                    echo       " <span class='text-buttonColor font-extrabold font-sans text-xl'>$line[prec_prod]</span>";
+                    echo       "<input type'text' name='cod' value='$line[cod_prod]' class=''>";
+                    echo        "<button type='submit' class='hover:bg-white' '><img src='./assets/incons/carSet.png' '></button>";
+                    echo    "</div>";
+                    echo "</div>";
+                }
 
-
-
-                <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
-                    <button>
-                        <img src="./assets/incons/FireForce.png" alt=""> <br>
-                    </button>
-                    <hr class="border border-white w-60"> <br>
-                    <span class="text-buttonColor font-bold font-sans text-xl">Fire Force Vol.27</span>
-
-                    <div class="flex flex-row justify-between items-center w-52 mt-3">
-                        <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 34,90</span>
-                        <button class="hover:bg-white" id="car"><img src="./assets/incons/carSet.png" alt=""></button>
-                    </div>
-                </div>
-
-                <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
-                    <button>
-                        <img src="./assets/incons/kimetsu.png" alt=""> <br>
-                    </button>
-                    <hr class="border border-white w-60"> <br>
-                    <span class="text-buttonColor font-bold font-sans text-xl">Demon Slayer - <br>
-                        Kimetsu no Yaiba <br>
-                        Vol. 8
-                    </span>
-
-                    <div class="flex flex-row justify-between items-center w-52 mt-3">
-                        <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 30,90</span>
-                        <button class="hover:bg-white" id="car"><img src="./assets/incons/carSet.png" alt=""></button>
-                    </div>
-                </div>
-
-                <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
-                    <button>
-                        <img src="./assets/incons/Jujutsu.png" alt=""> <br>
-                    </button>
-                    <hr class="border border-white w-60"> <br>
-                    <span class="text-buttonColor font-bold font-sans text-xl">Jujutsu Kaisen Vol. 1</span>
-
-                    <div class="flex flex-row justify-between items-center w-52 mt-3">
-                        <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 35,90</span>
-                        <button class="hover:bg-white" id="car"><img src="./assets/incons/carSet.png" alt=""></button>
-                    </div>
-                </div>
-
-                <div class="bg-cardColor w-64 h-cardH flex flex-col justify-center items-center rounded-md">
-                    <button>
-                        <img src="./assets/incons/naruto.png" alt=""> <br>
-                    </button>
-                    <hr class="border border-white w-60"> <br>
-                    <span class="text-buttonColor font-bold font-sans text-xl">Naruto Gold Vol. 64</span>
-
-                    <div class="flex flex-row justify-between items-center w-52 mt-3">
-                        <span class="text-buttonColor font-extrabold font-sans text-xl">R$ 27,90</span>
-                        <button class="hover:bg-white" id="car"><img src="./assets/incons/carSet.png" alt=""></button>
-                    </div>
-                </div>
-
+                ?>
             </div>
-        </div>
-    </div>
+            
 
-    <?php
+            <?php
 
-    //$global = include_once './server/login/login.php';
-    // $set = setBut();
-    //echo $set;
-    include_once './server/BDconection.php';
-    include_once './server/login/login.php';
+            //$global = include_once './server/login/login.php';
+            // $set = setBut();
+            //echo $set;
+            include_once './server/BDconection.php';
+            include_once './server/login/login.php';
 
-    $set = conection();
-    $sql = "select * from person";
-    $result = $set->query($sql);
-    $list = $result->fetch(PDO::FETCH_ASSOC);
+            $set = conection();
+            $sql = "select * from person";
+            $result = $set->query($sql);
+            $list = $result->fetch(PDO::FETCH_ASSOC);
 
-    // $name = $list['pes_nome'];
+            // $name = $list['pes_nome'];
 
-    ?>
+            ?>
 
 </body>
 
 <script src="./src/home.js"></script>
 <script src="./src/beforeRedirect.js"></script>
+<script src="./src/home/sendCar.js"></script>
 
 
 
-</script>
-<script id="remember" name="remember">
 
-</script>
 
 
 <script>

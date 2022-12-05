@@ -47,12 +47,17 @@ function setBut()
             echo "<script>";
             echo    "function request() {";
              echo    "localStorage.setItem('personName', '$name')";
-             echo        "localStorage.setItem('email', '$email')";
+             
              echo   "}";
 
              echo      "request()";
             echo "</script>";
             echo "<script src='../server/login/redirect.js'>";
+            echo "</script>";
+
+
+            echo "<script>";
+            echo   "localStorage.setItem('email', '$email')";
             echo "</script>";
             
         }

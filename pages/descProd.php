@@ -48,7 +48,7 @@
                 </div>
                 <div class="flex flex-col gap-20">
                     <div>
-                        <h1 class="text-white font-extrabold text-4xl font-sans">Nome do produto</h1>
+                        <h1 id="prodNm" class="text-white font-extrabold text-4xl font-sans">Nome do produto</h1>
                         <p class="text-white font-medium">descrição</p>
                     </div>
                     <hr class="border-cardColor">

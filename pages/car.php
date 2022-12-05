@@ -14,13 +14,15 @@
 
 <body class="bg-background">
     <?php
-    include_once "../server/BDconection.php";
-    $set = conection();
+    include_once '../server/BDconection.php';
 
-    $sql = "select * from Carrinho";
-    $result = $set->query($sql);
+    $bank = conection();
 
-    $line = $result->fetch(PDO::FETCH_ASSOC)
+    $sql = "SELECT c.car_id, c.pes_id, p.prod_nm, p.prec_prod, p.imagem FROM `carrinho` c INNER JOIN produto p on c.cod_prod = p.cod_prod;";
+
+    $query = $bank->query($sql);
+
+    $list = $query->fetch(PDO::FETCH_ASSOC);
     ?>
 
     <header>
@@ -49,43 +51,50 @@
         </div>
     </header> <br>
 
-    <div id="descArea" class="flex flex-row justify-center items-center gap-24">
-        <div class="flex flex-row gap-6 ">
-            <div class="bg-NavColor flex flex-col justify-startr rounded">
-                <h1 class="text-white text-4xl font-bold">Carrinho de compras</h1> <br>
-                <hr class="border-input">
+    <?php
+     while($list = $query->fetch(PDO::FETCH_ASSOC)){
+      echo  "<div id='descArea' class='flex flex-row justify-center items-center gap-24'>";
+        echo "<div class='flex flex-row gap-6 '>";
+            echo "<div class='bg-NavColor flex flex-col justify-startr rounded'>";
+                echo "<h1 class='text-white text-4xl font-bold'>Carrinho de compras</h1> <br>";
+               echo "<hr class='border-input'>";
 
-                <div class="flex flex-row bg-NavColor rounded gap-36 h-80">
-                    <div class="flex flex-row justify-center items-center">
-                        <div class="flex flex-row">
-                            <img src="../assets/incons/FireForce.png" alt="" class="w-44 h-60">
-                        </div>
-                        <div class="flex flex-col gap-8 ml-2">
-                            <h1 class="text-white text-2xl">Nome do produto</h1>
-                            <div>
-                                <span class="text-white text-sm">Quantidade:</span>
-                                <input type="number" value="1" class="w-16 h-6 text-center">
+               echo "<div class='flex flex-row bg-NavColor rounded gap-36 h-80'>";
+                 echo   "<div class='flex flex-row justify-center items-center'>";
+                   echo     "<div class='flex flex-row'>";
+                   echo         "<img src='.$list[imagem]'  class='w-44 h-60'>";
+                  echo      "</div>";
+                    echo    "<div class='flex flex-col gap-8 ml-2'>";
+                   echo         "<h1 class='text-white text-2xl'>$list[prod_nm]</h1>";
+                   echo         "<div>";
+                    echo            "<span class='text-white text-sm'>Quantidade:</span>";
+                    echo            "<input type='number' value='1' class='w-16 h-6 text-center'>";
+                    
+                   echo         "</div>";
+                        "</div>";
+                    
+                  echo  "</div>";
 
-                            </div>
-                        </div>
 
-                    </div>
+                   echo "<div class='flex flex-col gap-32 items-center'>";
+                   echo     "<div class='flex flex-col'>";
+                   echo         "<span class='text-white text-sm'>Preço</span>";
+                   echo        " <span class='text-white text-3xl'>$list[prec_prod]</span>";
+                   echo         "<p class='text-white'>Em até 6x de <span>asdas</span> em juros</p>";
+                   echo    " </div>";
+                   echo     "<div class='flex flex-col justify-center items-center'>";
+                   echo         "<button id='exclud'onclick='eliminateProduct()'><img src='../assets/incons/Eliminar.png'></button>";
 
+                  echo     " </div>";
+                  echo " </div>";
 
-                    <div class="flex flex-col gap-32 items-center">
-                        <div class="flex flex-col ">
-                            <span class="text-white text-sm">Preço</span>
-                            <span class="text-white text-3xl">Preco do produto</span>
-                            <p class="text-white">Em até 6x de <span>asdas</span> em juros</p>
-                        </div>
-                        <div class="flex flex-col justify-center items-center">
-                            <button id="exclud" onclick="eliminateProduct()"><img src="../assets/incons/Eliminar.png" alt=""></button>
+                echo"</div>";
+           echo "</div>";
+     }
+    
+    ?>
 
-                        </div>
-                    </div>
-
-                </div>
-            </div>
+    
 
 
             <div class="flex flex-col items-center bg-NavColor h-full rounded gap-4">
